@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Level>
+	<Object>
+		<BodyComponent x="100" y="200" vx="0" vy="0" angle="0" width="40" height="70" />
+		<SpriteComponent texture="hero" />
+		<ControllerComponent speed="2" />	
+	</Object>
+	<Object>
+		<BodyComponent x="100" y="400" vx="0" vy="0" angle="0" />
+		<SpriteComponent texture="enemy" />
+		<SlideComponent speed="2" left="100" right="200" />
+	</Object>
+	<Object>
+		<BodyComponent x="300" y="200" vx="0" vy="0" angle="0" width="100" />
+		<SpriteComponent texture="enemy" />
+	</Object>
+</Level>

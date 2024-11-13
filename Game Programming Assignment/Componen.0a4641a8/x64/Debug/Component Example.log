@@ -1,0 +1,17 @@
+﻿  main.cpp
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Components\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+      C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Components\GameObject.h(11,40):
+      the template instantiation context (the oldest one first) is
+          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Components\SpriteComponent.h(22,30):
+          see reference to function template instantiation 'T *GameObject::get<BodyComponent>(void)' being compiled
+          with
+          [
+              T=BodyComponent
+          ]
+          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Components\GameObject.h(27,35):
+          see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
+  
+  Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Components\x64\Debug\Component Example.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
