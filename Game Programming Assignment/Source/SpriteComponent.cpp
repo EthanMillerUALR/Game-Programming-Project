@@ -15,13 +15,16 @@ std::unique_ptr<Component> SpriteComponent::create(GameObject& parent, tinyxml2:
 }
 
 void SpriteComponent::draw() {
-    SDL_Texture* texture = Textures::getOrLoad(textureKey, Engine::getRenderer());  // Load or retrieve the texture
+    // Construct the full path without adding any extensions
+    std::string fullPath = "Assets/Images/" + textureKey;
+
+    SDL_Texture* texture = Textures::getOrLoad(textureKey, fullPath, Engine::getRenderer());
     if (!texture) {
-        SDL_Log("Texture %s not found", textureKey.c_str());
+        SDL_Log("Failed to load texture: %s", textureKey.c_str());
         return;
     }
 
-    auto body = parent().get<BodyComponent>();  // Get the BodyComponent
+    auto body = parent().get<BodyComponent>();
     if (body) {
         bodyMissingLogged = false;
 
@@ -33,13 +36,19 @@ void SpriteComponent::draw() {
         float angle = body->angle();
         SDL_Point center = { width / 2, height / 2 };
 
-        SDL_RenderCopyEx(Engine::getRenderer(), texture, nullptr, &dst, angle, &center, SDL_FLIP_NONE);
+        if (SDL_RenderCopyEx(Engine::getRenderer(), texture, nullptr, &dst, angle, &center, SDL_FLIP_NONE) != 0) {
+            SDL_Log("SDL_RenderCopyEx error: %s", SDL_GetError());
+        }
     }
     else if (!bodyMissingLogged) {
         SDL_Log("BodyComponent is missing. Cannot draw SpriteComponent.");
         bodyMissingLogged = true;
     }
 }
+
+
+
+
 
 
 

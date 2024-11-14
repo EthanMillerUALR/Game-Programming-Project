@@ -3,21 +3,20 @@
 #include "Textures.h"
 
 int main(int argc, char* argv[]) {
-    // Initialize the engine
+    // Initialize the engine (set up SDL, window, and renderer)
     if (!Engine::init("SDL2 Game Engine", 800, 600)) {
         return -1;
     }
 
-    SDL_Renderer* renderer = Engine::getRenderer();
-
-    // Load level from XML file
-    Engine engine("Assets/GameObjects.xml");  // Loads level upon initialization
+    // Load level from XML file and create the Engine instance
+    Engine engine("Assets/GameObjects.xml");  // Initializes the engine and loads the level
 
     // Run the game loop
-    engine.run();
+    engine.run();  // Start the game loop
 
     return 0;
 }
+
 
 
 

@@ -5,19 +5,15 @@
 
 class Textures {
 public:
-    // Retrieve an already-loaded texture by key
-    static SDL_Texture* get(const std::string& textureKey);
-
-    // Get a texture by its key, or load it if not already loaded
-    static SDL_Texture* getOrLoad(const std::string& textureKey, SDL_Renderer* renderer);
-
-    // Folder path for images
-    static const std::string imageFolderPath;
+    // Add `fileName` as a parameter
+    static SDL_Texture* getOrLoad(const std::string& textureKey, const std::string& fileName, SDL_Renderer* renderer);
 
 private:
-    // Static map to cache textures by their key
-    static std::unordered_map<std::string, SDL_Texture*> textures;
+    // Declare `textures` to store both the texture pointer and the loaded-flag boolean
+    static std::unordered_map<std::string, std::pair<SDL_Texture*, bool>> textures;
 };
+
+
 
 
 

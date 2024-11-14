@@ -39,10 +39,10 @@ public:
                 }
 
                 if (goingRight) {
-                    body->x() += slideSpeed;
+                    body->x() += slideSpeed;  // Use slideSpeed consistently
                 }
                 else {
-                    body->x() -= slideSpeed;
+                    body->x() -= slideSpeed;  // Use slideSpeed consistently
                 }
             }
         }

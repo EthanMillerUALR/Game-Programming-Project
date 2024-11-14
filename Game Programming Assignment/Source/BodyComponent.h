@@ -5,7 +5,7 @@
 
 class BodyComponent : public Component {
 public:
-    BodyComponent(GameObject& owner, double x = 0, double y = 0, double vx = 0, double vy = 0, double angle = 0, int width = 50, int height = 50)
+    BodyComponent(GameObject& owner, double x = 0, double y = 0, int width = 50, int height = 50, double vx = 0, double vy = 0, double angle = 0)
         : Component(owner), _x(x), _y(y), _vx(vx), _vy(vy), _angle(angle), width(width), height(height) {}
 
     static std::unique_ptr<Component> create(GameObject& parent, tinyxml2::XMLElement* element);
