@@ -10,16 +10,6 @@ int main(int argc, char* argv[]) {
 
     SDL_Renderer* renderer = Engine::getRenderer();
 
-    // Load textures
-    if (Textures::getOrLoad("hero", "dino.png", renderer) == nullptr) {
-        SDL_Log("Failed to load hero texture");
-        return -1;
-    }
-    if (Textures::getOrLoad("enemy", "squirrel.png", renderer) == nullptr) {
-        SDL_Log("Failed to load enemy texture");
-        return -1;
-    }
-
     // Load level from XML file
     Engine engine("Assets/GameObjects.xml");  // Loads level upon initialization
 

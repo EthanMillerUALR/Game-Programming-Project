@@ -2,16 +2,16 @@
 <Level>
 	<Object>
 		<BodyComponent x="100" y="200" vx="0" vy="0" angle="0" width="40" height="70" />
-		<SpriteComponent texture="hero" />
+		<SpriteComponent texture="dino.png" />
 		<ControllerComponent speed="2" />	
 	</Object>
 	<Object>
 		<BodyComponent x="100" y="400" vx="0" vy="0" angle="0" />
-		<SpriteComponent texture="enemy" />
+		<SpriteComponent texture="squirrel.png" />
 		<SlideComponent speed="2" left="100" right="200" />
 	</Object>
 	<Object>
 		<BodyComponent x="300" y="200" vx="0" vy="0" angle="0" width="100" />
-		<SpriteComponent texture="enemy" />
+		<SpriteComponent texture="squirrel.png" />
 	</Object>
 </Level>

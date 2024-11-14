@@ -1,35 +1,41 @@
 #include "Textures.h"
 #include <SDL2/SDL_image.h>
 
-// Define the static member textures
+// Define the static member textures and image folder path
 std::unordered_map<std::string, SDL_Texture*> Textures::textures;
+const std::string Textures::imageFolderPath = "Assets/Images/";
 
 SDL_Texture* Textures::get(const std::string& textureKey) {
-    // Return the texture if it exists in the cache
-    if (textures.find(textureKey) != textures.end()) {
-        return textures[textureKey];
+    auto it = textures.find(textureKey);
+    if (it != textures.end()) {
+        return it->second;
     }
 
-    // Log an error if the texture is not found
-    SDL_Log("Texture not found for key: %s", textureKey.c_str());
+    SDL_Log("Texture %s not found in cache", textureKey.c_str());
     return nullptr;
 }
 
-SDL_Texture* Textures::getOrLoad(const std::string& textureKey, const std::string& fileName, SDL_Renderer* renderer) {
+SDL_Texture* Textures::getOrLoad(const std::string& textureKey, SDL_Renderer* renderer) {
     // Check if the texture is already loaded
-    if (textures.find(textureKey) != textures.end()) {
-        return textures[textureKey];  // Return the already loaded texture
+    auto it = textures.find(textureKey);
+    if (it != textures.end()) {
+        return it->second;  // Return the cached texture without logging
     }
 
-    // If not loaded, load the texture using SDL_image
-    SDL_Texture* newTexture = IMG_LoadTexture(renderer, fileName.c_str());
+    // Build the full path to the image file in the Assets/Images directory
+    std::string fullPath = imageFolderPath + textureKey;
+
+    // Attempt to load the texture from the file
+    SDL_Texture* newTexture = IMG_LoadTexture(renderer, fullPath.c_str());
     if (newTexture) {
-        // Cache the loaded texture
         textures[textureKey] = newTexture;
+        SDL_Log("Loaded texture %s from %s", textureKey.c_str(), fullPath.c_str());  // Log only on first load
     }
     else {
-        SDL_Log("Failed to load texture: %s, Error: %s", fileName.c_str(), SDL_GetError());
+        SDL_Log("Failed to load texture %s from %s, Error: %s", textureKey.c_str(), fullPath.c_str(), SDL_GetError());
     }
 
     return newTexture;
 }
+
+
