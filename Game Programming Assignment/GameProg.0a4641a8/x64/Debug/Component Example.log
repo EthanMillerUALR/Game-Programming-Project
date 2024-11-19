@@ -1,18 +1,4 @@
-﻿  ComponentLibrary.cpp
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source/ComponentLibrary.cpp')
-      C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40):
-      the template instantiation context (the oldest one first) is
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SlideComponent.h(30,34):
-          see reference to function template instantiation 'T *GameObject::get<BodyComponent>(void)' being compiled
-          with
-          [
-              T=BodyComponent
-          ]
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(32,18):
-          see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
-  
-  SlideComponent.cpp
+﻿  SlideComponent.cpp
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'Source/SlideComponent.cpp')
       C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40):
@@ -26,7 +12,6 @@ C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Program
           C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(32,18):
           see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
   
-  Generating Code...
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
