@@ -77,7 +77,7 @@ void Engine::loadLevel(const std::string& levelPath) {
     SDL_Log("Level loading completed from %s", levelPath.c_str());
 }
 
-// New frame timing methods
+// New frame timing methods (Not Needed, To Be Simplified/Deleted)
 void Engine::startFrame() {
     lastTicks = SDL_GetPerformanceCounter();  // Record the start time for this frame
 }
@@ -86,6 +86,7 @@ void Engine::endFrame() {
     currentTicks = SDL_GetPerformanceCounter();  // Record the end time for this frame
     deltaTime = (currentTicks - lastTicks) / static_cast<double>(SDL_GetPerformanceFrequency()); // Calculate deltaTime
     calculateFrameRate();  // Update FPS
+
 }
 
 void Engine::calculateFrameRate() {

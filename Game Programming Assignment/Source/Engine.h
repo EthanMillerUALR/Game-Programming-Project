@@ -65,7 +65,7 @@ public:
 
     // Render all game objects (static)
     static void render() {
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_SetRenderDrawColor(renderer, 34, 179, 34, 255);
         SDL_RenderClear(renderer);
 
         for (auto& gameObject : gameObjects) {
@@ -126,8 +126,11 @@ public:
                 logStartTime = currentTicks;  // Reset the log timer
             }
 
-            // Optional: Add a small delay to prevent the loop from maxing out the CPU (e.g., 1ms delay)
-            SDL_Delay(0);  // Delay 1ms to reduce CPU usage
+            //Take Current NonDelayTimer
+            // NonDelayTimer = EndTicks - StartTicks
+            SDL_Delay(16);  // Delay 1ms to reduce CPU usage
+            //SDL_Delay((1000/WantedFPS)-NonDelayTime)
+            //Plug StartTicks into CurrentTicks, Update DeltaTime
         }
 
         clean();  // Clean up when the game ends
@@ -161,3 +164,6 @@ private:
 
     static Uint64 logStartTime;  // For logging FPS every second
 };
+
+//REMEMBER: The view class should be simple to start, just keep track of the x and y
+//Some possible Ideas: Keep Track Of Character Movements
