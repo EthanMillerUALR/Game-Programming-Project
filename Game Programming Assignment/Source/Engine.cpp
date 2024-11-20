@@ -1,5 +1,4 @@
 #include "Engine.h"
-#include "tinyxml2.h"
 
 // Definition of static members
 bool Engine::isRunning = false;
@@ -9,10 +8,20 @@ std::vector<std::unique_ptr<GameObject>> Engine::gameObjects;
 int Engine::width = 0;
 int Engine::height = 0;
 
+Uint64 Engine::currentTicks = 0;
+Uint64 Engine::lastTicks = 0;
+double Engine::deltaTime = 0.0;
+int Engine::frameCount = 0;
+double Engine::fps = 0.0;
+Uint64 Engine::fpsStartTime = 0;
+
+Uint64 Engine::logStartTime = 0;  // New timer for logging FPS
+
 Engine::Engine(const std::string& levelPath)
 {
     std::cout << "Loading level from: " << levelPath << std::endl;
     loadLevel(levelPath);
+    logStartTime = SDL_GetPerformanceCounter();  // Initialize logging timer
 }
 
 void Engine::loadLevel(const std::string& levelPath) {
@@ -68,8 +77,37 @@ void Engine::loadLevel(const std::string& levelPath) {
     SDL_Log("Level loading completed from %s", levelPath.c_str());
 }
 
+// New frame timing methods
+void Engine::startFrame() {
+    lastTicks = SDL_GetPerformanceCounter();  // Record the start time for this frame
+}
 
+void Engine::endFrame() {
+    currentTicks = SDL_GetPerformanceCounter();  // Record the end time for this frame
+    deltaTime = (currentTicks - lastTicks) / static_cast<double>(SDL_GetPerformanceFrequency()); // Calculate deltaTime
+    calculateFrameRate();  // Update FPS
+}
 
+void Engine::calculateFrameRate() {
+    frameCount++;  // Increment the frame count
 
+    Uint64 elapsedTime = currentTicks - fpsStartTime;
+    if (elapsedTime >= SDL_GetPerformanceFrequency()) {  // Check if 1 second has passed
+        fps = static_cast<double>(frameCount) / (elapsedTime / static_cast<double>(SDL_GetPerformanceFrequency()));  // Calculate FPS
+        frameCount = 0;  // Reset the frame count
+        fpsStartTime = currentTicks;  // Reset the start time for FPS calculation
+        logFPS();  // Log FPS to the console
+    }
+}
 
+void Engine::logFPS() {
+    SDL_Log("FPS: %.2f", fps);  // Log the calculated FPS to the console
+}
 
+double Engine::getDeltaTime() {
+    return deltaTime;
+}
+
+double Engine::getFPS() {
+    return fps;
+}

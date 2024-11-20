@@ -2,7 +2,10 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include <memory>  // For std::unique_ptr
+#include <string>
+#include <chrono>  // For time tracking
 #include "Input.h"
+#include <iostream>
 #include "GameObject.h"
 #include "ComponentLibrary.h"
 #include "tinyxml2.h"  // Include the XML parser
@@ -95,31 +98,66 @@ public:
 
     // Run the engine (static)
     static void run() {
+        lastTicks = SDL_GetPerformanceCounter();  // Record the start time for the frame loop
+
         while (isRunning) {
+            currentTicks = SDL_GetPerformanceCounter();  // Record the current time for this frame
+            deltaTime = (currentTicks - lastTicks) / static_cast<double>(SDL_GetPerformanceFrequency());  // Calculate deltaTime
+            lastTicks = currentTicks;  // Set the lastTicks to current for the next frame
+
             handleEvents();
             update();
             render();
-            SDL_Delay(16);  // Delay to control the game loop timing (60 FPS)
+
+            frameCount++;  // Increment frame count for FPS calculation
+
+            // Calculate FPS every second
+            Uint64 elapsedTime = currentTicks - fpsStartTime;
+            if (elapsedTime >= SDL_GetPerformanceFrequency()) {
+                fps = static_cast<double>(frameCount) / (elapsedTime / static_cast<double>(SDL_GetPerformanceFrequency()));  // FPS = frames per second
+                frameCount = 0;  // Reset the frame count after calculating FPS
+                fpsStartTime = currentTicks;  // Reset the time for FPS calculation
+            }
+
+            // Log FPS every second
+            Uint64 logElapsedTime = currentTicks - logStartTime;
+            if (logElapsedTime >= SDL_GetPerformanceFrequency()) {
+                SDL_Log("FPS: %.2f", fps);  // Log FPS to console every second
+                logStartTime = currentTicks;  // Reset the log timer
+            }
+
+            // Optional: Add a small delay to prevent the loop from maxing out the CPU (e.g., 1ms delay)
+            SDL_Delay(0);  // Delay 1ms to reduce CPU usage
         }
 
-        clean();
+        clean();  // Clean up when the game ends
     }
+
 
     static SDL_Renderer* getRenderer() {
         return renderer;
     }
+    static double getDeltaTime();  // Getter for deltaTime
+    static double getFPS();        // Getter for FPS
 
-    // Create ComponentLibrary instance for instance-based operations
-    //void createComponentLibrary() {
-    //    componentLibrary = ComponentLibrary();
-    //}
+    // New methods for frame rate tracking
+    static void startFrame();
+    static void endFrame();
+    static void calculateFrameRate();
+    static void logFPS();  // Add this declaration
 
 private:
     static bool isRunning;                               // Engine running state (static)
     static SDL_Window* window;                           // SDL window (static)
     static SDL_Renderer* renderer;                       // SDL renderer (static)
     static std::vector<std::unique_ptr<GameObject>> gameObjects;  // Track game objects
+
+    static Uint64 currentTicks;  // For frame timing
+    static Uint64 lastTicks;
+    static double deltaTime;     // Time elapsed between frames
+    static int frameCount;       // Count frames for FPS calculation
+    static double fps;           // FPS calculation
+    static Uint64 fpsStartTime;  // Time when FPS calculation starts
+
+    static Uint64 logStartTime;  // For logging FPS every second
 };
-
-
-

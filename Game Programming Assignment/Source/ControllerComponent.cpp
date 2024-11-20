@@ -26,19 +26,15 @@ void ControllerComponent::update() {
 
     if (upPressed) {
         body->setVelocity(body->vx(), -moveSpeed);
-        message += "Up arrow is pressed. ";
     }
     if (downPressed) {
         body->setVelocity(body->vx(), moveSpeed);
-        message += "Down arrow is pressed. ";
     }
     if (leftPressed) {
         body->setVelocity(-moveSpeed, body->vy());
-        message += "Left arrow is pressed. ";
     }
     if (rightPressed) {
         body->setVelocity(moveSpeed, body->vy());
-        message += "Right arrow is pressed. ";
     }
 
     if (!message.empty()) {
