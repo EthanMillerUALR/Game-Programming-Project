@@ -98,42 +98,34 @@ public:
 
     // Run the engine (static)
     static void run() {
-        lastTicks = SDL_GetPerformanceCounter();  // Record the start time for the frame loop
+        const int targetFPS = 60;
+        const double targetFrameTime = 1000.0 / targetFPS;
 
         while (isRunning) {
-            currentTicks = SDL_GetPerformanceCounter();  // Record the current time for this frame
-            deltaTime = (currentTicks - lastTicks) / static_cast<double>(SDL_GetPerformanceFrequency());  // Calculate deltaTime
-            lastTicks = currentTicks;  // Set the lastTicks to current for the next frame
+            Uint64 frameStart = SDL_GetPerformanceCounter();
 
             handleEvents();
             update();
             render();
 
-            frameCount++;  // Increment frame count for FPS calculation
+            Uint64 frameEnd = SDL_GetPerformanceCounter();
+            double frameDuration = (frameEnd - frameStart) * 1000.0 / SDL_GetPerformanceFrequency();
 
-            // Calculate FPS every second
-            Uint64 elapsedTime = currentTicks - fpsStartTime;
-            if (elapsedTime >= SDL_GetPerformanceFrequency()) {
-                fps = static_cast<double>(frameCount) / (elapsedTime / static_cast<double>(SDL_GetPerformanceFrequency()));  // FPS = frames per second
-                frameCount = 0;  // Reset the frame count after calculating FPS
-                fpsStartTime = currentTicks;  // Reset the time for FPS calculation
+            // Delay to maintain target FPS
+            if (frameDuration < targetFrameTime) {
+                SDL_Delay(static_cast<Uint32>(targetFrameTime - frameDuration));
             }
 
-            // Log FPS every second
-            Uint64 logElapsedTime = currentTicks - logStartTime;
-            if (logElapsedTime >= SDL_GetPerformanceFrequency()) {
-                SDL_Log("FPS: %.2f", fps);  // Log FPS to console every second
-                logStartTime = currentTicks;  // Reset the log timer
-            }
+            // Recalculate total frame time, including delay
+            Uint64 frameComplete = SDL_GetPerformanceCounter();
+            deltaTime = (frameComplete - frameStart) / static_cast<double>(SDL_GetPerformanceFrequency());
 
-            //Take Current NonDelayTimer
-            // NonDelayTimer = EndTicks - StartTicks
-            SDL_Delay(16);  // Delay 1ms to reduce CPU usage
-            //SDL_Delay((1000/WantedFPS)-NonDelayTime)
-            //Plug StartTicks into CurrentTicks, Update DeltaTime
+            // Log FPS
+            double fps = 1.0 / deltaTime;
+            SDL_Log("FPS: %.2f", fps);
         }
 
-        clean();  // Clean up when the game ends
+        clean();
     }
 
 
@@ -141,13 +133,6 @@ public:
         return renderer;
     }
     static double getDeltaTime();  // Getter for deltaTime
-    static double getFPS();        // Getter for FPS
-
-    // New methods for frame rate tracking
-    static void startFrame();
-    static void endFrame();
-    static void calculateFrameRate();
-    static void logFPS();  // Add this declaration
 
 private:
     static bool isRunning;                               // Engine running state (static)
@@ -155,14 +140,8 @@ private:
     static SDL_Renderer* renderer;                       // SDL renderer (static)
     static std::vector<std::unique_ptr<GameObject>> gameObjects;  // Track game objects
 
-    static Uint64 currentTicks;  // For frame timing
     static Uint64 lastTicks;
     static double deltaTime;     // Time elapsed between frames
-    static int frameCount;       // Count frames for FPS calculation
-    static double fps;           // FPS calculation
-    static Uint64 fpsStartTime;  // Time when FPS calculation starts
-
-    static Uint64 logStartTime;  // For logging FPS every second
 };
 
 //REMEMBER: The view class should be simple to start, just keep track of the x and y
