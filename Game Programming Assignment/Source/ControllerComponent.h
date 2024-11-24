@@ -10,12 +10,12 @@
 
 class ControllerComponent : public Component {
 public:
-    ControllerComponent(GameObject& parent, double moveSpeed = 5.0)
+    ControllerComponent(GameObject& parent, float moveSpeed = 5.0)
         : Component(parent), moveSpeed(moveSpeed) {}
 
     static std::unique_ptr<Component> create(GameObject& parent, tinyxml2::XMLElement* element);
 
-    void setSpeed(int speed);
+    void setSpeed(float speed);
 
     void update() override;
 

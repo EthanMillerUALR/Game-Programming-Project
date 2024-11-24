@@ -122,7 +122,6 @@ public:
 
             // Log FPS
             double fps = 1.0 / deltaTime;
-            SDL_Log("FPS: %.2f", fps);
         }
 
         clean();
@@ -146,3 +145,7 @@ private:
 
 //REMEMBER: The view class should be simple to start, just keep track of the x and y
 //Some possible Ideas: Keep Track Of Character Movements
+
+//Engine will keep track of an view x and a view y where you are looking
+//Whenever something is being drawn, you can just subtract off the view x and view y
+//Now if you change the view x and view y, the camera will move

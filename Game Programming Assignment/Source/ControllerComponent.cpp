@@ -1,5 +1,7 @@
 #include "ControllerComponent.h"
 
+#include "Engine.h"
+
 std::unique_ptr<Component> ControllerComponent::create(GameObject& parent, tinyxml2::XMLElement* element)
 {
     double speed = element->IntAttribute("speed", 0);
@@ -8,8 +10,8 @@ std::unique_ptr<Component> ControllerComponent::create(GameObject& parent, tinyx
     return component;
 }
 
-void ControllerComponent::setSpeed(int speed) {
-    moveSpeed = static_cast<double>(speed);
+void ControllerComponent::setSpeed(float speed) {
+    moveSpeed = static_cast<float>(speed);
 }
 
 void ControllerComponent::update() {
@@ -19,22 +21,24 @@ void ControllerComponent::update() {
     body->setVelocity(0, 0);
     std::string message;
 
+    double newSpeed = moveSpeed * Engine::getDeltaTime();
+
     bool upPressed = Input::isKeyDown(SDLK_UP);
     bool downPressed = Input::isKeyDown(SDLK_DOWN);
     bool leftPressed = Input::isKeyDown(SDLK_LEFT);
     bool rightPressed = Input::isKeyDown(SDLK_RIGHT);
 
     if (upPressed) {
-        body->setVelocity(body->vx(), -moveSpeed);
+        body->setVelocity(body->vx(), -newSpeed);
     }
     if (downPressed) {
-        body->setVelocity(body->vx(), moveSpeed);
+        body->setVelocity(body->vx(), newSpeed);
     }
     if (leftPressed) {
-        body->setVelocity(-moveSpeed, body->vy());
+        body->setVelocity(-newSpeed, body->vy());
     }
     if (rightPressed) {
-        body->setVelocity(moveSpeed, body->vy());
+        body->setVelocity(newSpeed, body->vy());
     }
 
     if (!message.empty()) {

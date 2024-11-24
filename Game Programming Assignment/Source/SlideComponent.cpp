@@ -8,6 +8,6 @@ std::unique_ptr<Component> SlideComponent::create(GameObject& parent, tinyxml2::
     return std::make_unique<SlideComponent>(parent, speed, leftx, rightx);
 }
 
-void SlideComponent::setSpeed(int speed) {
-    slideSpeed = static_cast<double>(speed);
+void SlideComponent::setSpeed(float speed) {
+    slideSpeed = static_cast<float>(speed);
 }

@@ -5,31 +5,31 @@
 
 class BodyComponent : public Component {
 public:
-    BodyComponent(GameObject& owner, double x = 0, double y = 0, int width = 50, int height = 50, double vx = 0, double vy = 0, double angle = 0)
+    BodyComponent(GameObject& owner, float x = 0, float y = 0, int width = 50, int height = 50, float vx = 0, float vy = 0, float angle = 0)
         : Component(owner), _x(x), _y(y), _vx(vx), _vy(vy), _angle(angle), width(width), height(height) {}
 
     static std::unique_ptr<Component> create(GameObject& parent, tinyxml2::XMLElement* element);
 
-    double& x() { return _x; }
-    double& y() { return _y; }
-    double& vx() { return _vx; }
-    double& vy() { return _vy; }
-    double& angle() { return _angle; }
+    float& x() { return _x; }
+    float& y() { return _y; }
+    float& vx() { return _vx; }
+    float& vy() { return _vy; }
+    float& angle() { return _angle; }
 
     int getWidth() const { return width; }
     int getHeight() const { return height; }
 
-    void setPosition(double x, double y) {
+    void setPosition(float x, float y) {
         _x = x;
         _y = y;
     }
 
-    void setVelocity(double vx, double vy) {
+    void setVelocity(float vx, float vy) {
         _vx = vx;
         _vy = vy;
     }
 
-    void setAngle(double angle) {
+    void setAngle(float angle) {
         _angle = angle;
     }
 
@@ -47,9 +47,9 @@ public:
     }
 
 private:
-    double _x, _y;   
-    double _vx, _vy;
-    double _angle;  
+    float _x, _y;   
+    float _vx, _vy;
+    float _angle;  
     int width;     
     int height;  
 };

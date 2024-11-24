@@ -3,12 +3,12 @@
 	<Object>
 		<BodyComponent x="100" y="200" vx="0" vy="0" angle="0" width="40" height="70" />
 		<SpriteComponent texture="dino.png" />
-		<ControllerComponent speed="2" />	
+		<ControllerComponent speed="150" />	
 	</Object>
 	<Object>
 		<BodyComponent x="100" y="400" vx="0" vy="0" angle="0" />
 		<SpriteComponent texture="squirrel.png" />
-		<SlideComponent speed="4" leftx="100" rightx="200" />
+		<SlideComponent speed="200" leftx="100" rightx="200" />
 	</Object>
 	<Object>
 		<BodyComponent x="300" y="200" vx="0" vy="0" angle="0" width="100" />
