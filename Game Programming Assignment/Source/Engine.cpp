@@ -11,6 +11,8 @@ int Engine::height = 0;
 Uint64 Engine::lastTicks = 0;
 double Engine::deltaTime = 0.0;
 
+View Engine::view; // Define the static View instance
+
 Engine::Engine(const std::string& levelPath)
 {
     std::cout << "Loading level from: " << levelPath << std::endl;

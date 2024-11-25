@@ -31,7 +31,16 @@ void SpriteComponent::draw() {
         int width = body->getWidth();
         int height = body->getHeight();
 
-        SDL_Rect dst = { static_cast<int>(body->x()), static_cast<int>(body->y()), width, height };
+        // Adjust sprite's position based on the View's center
+        double drawX = body->x() - Engine::view.getViewX();
+        double drawY = body->y() - Engine::view.getViewY();
+
+        SDL_Rect dst = {
+            static_cast<int>(drawX),
+            static_cast<int>(drawY),
+            width,
+            height
+        };
 
         float angle = body->angle();
         SDL_Point center = { width / 2, height / 2 };

@@ -9,6 +9,7 @@
 #include "GameObject.h"
 #include "ComponentLibrary.h"
 #include "tinyxml2.h"  // Include the XML parser
+#include "View.h"
 
 class ComponentLibrary;
 class Engine {
@@ -19,6 +20,9 @@ public:
     Engine(const std::string& levelPath);  // Constructor to load level from XML
 
     void loadLevel(const std::string& levelPath);  // Load GameObjects from the given XML
+
+    static View view;
+
 
     // Initialize the Engine (static)
     static bool init(const char* title, int width, int height) {
@@ -58,6 +62,30 @@ public:
 
     // Update all game objects (static)
     static void update() {
+
+        double deltaX = 0, deltaY = 0;
+
+        if (Input::isKeyDown(SDLK_LEFT)) {
+            deltaX -= 150 * Engine::getDeltaTime(); // Move view left
+        }
+        if (Input::isKeyDown(SDLK_RIGHT)) {
+            deltaX += 150 * Engine::getDeltaTime();; // Move view right
+        }
+        if (Input::isKeyDown(SDLK_UP)) {
+            deltaY -= 150 * Engine::getDeltaTime();; // Move view up
+        }
+        if (Input::isKeyDown(SDLK_DOWN)) {
+            deltaY += 150 * Engine::getDeltaTime();; // Move view down
+        }
+
+        if (deltaX != 0 || deltaY != 0) {
+            view.moveView(deltaX, deltaY);
+            std::cout << "View position updated: (" << view.getViewX() << ", " << view.getViewY() << ")" << std::endl;
+        }
+
+        std::cout << "View Position: (" << view.getViewX() << ", " << view.getViewY() << ")\n";
+
+
         for (auto& gameObject : gameObjects) {
             gameObject->update();  // Update each GameObject
         }

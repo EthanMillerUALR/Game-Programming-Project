@@ -145,6 +145,7 @@
     <ClInclude Include="Source\GameObject.h" />
     <ClInclude Include="Source\ControllerComponent.h" />
     <ClInclude Include="Source\ComponentLibrary.h" />
+    <ClInclude Include="Source\View.h" />
     <ClInclude Include="Source\Input.h" />
     <ClInclude Include="Source\SlideComponent.h" />
     <ClInclude Include="Source\SpriteComponent.h" />
