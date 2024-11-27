@@ -13,7 +13,7 @@ SDL_Texture* Textures::getOrLoad(const std::string& textureKey, const std::strin
     // If texture already loaded, return it and log once for "already loaded"
     if (it != textures.end()) {
         if (!it->second.second) {  // Check if the "already loaded" log was shown
-            SDL_Log("Texture %s already loaded", textureKey.c_str());
+            /*SDL_Log("Texture %s already loaded", textureKey.c_str());*/
             it->second.second = true;  // Set flag to prevent future logs
         }
         return it->second.first;
@@ -23,10 +23,10 @@ SDL_Texture* Textures::getOrLoad(const std::string& textureKey, const std::strin
     SDL_Texture* newTexture = IMG_LoadTexture(renderer, fileName.c_str());
     if (newTexture) {
         textures[textureKey] = std::make_pair(newTexture, false);  // Use make_pair to create the pair explicitly
-        SDL_Log("Loaded texture: %s", fileName.c_str());  // Log successful load
+        /*SDL_Log("Loaded texture: %s", fileName.c_str());*/  // Log successful load
     }
     else {
-        SDL_Log("Failed to load texture: %s, Error: %s", fileName.c_str(), SDL_GetError());
+        /*SDL_Log("Failed to load texture: %s, Error: %s", fileName.c_str(), SDL_GetError());*/
     }
 
     return newTexture;

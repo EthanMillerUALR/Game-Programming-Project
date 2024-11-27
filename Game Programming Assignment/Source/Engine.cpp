@@ -35,7 +35,7 @@ void Engine::loadLevel(const std::string& levelPath) {
 
     // Process each Object element in the XML
     for (tinyxml2::XMLElement* elem = root->FirstChildElement("Object"); elem != nullptr; elem = elem->NextSiblingElement("Object")) {
-        SDL_Log("Creating a new GameObject");
+        /*SDL_Log("Creating a new GameObject");*/
 
         // Create a blank GameObject
         auto gameObject = std::make_unique<GameObject>();
@@ -46,25 +46,25 @@ void Engine::loadLevel(const std::string& levelPath) {
         for (tinyxml2::XMLElement* compElement = elem->FirstChildElement(); compElement != nullptr; compElement = compElement->NextSiblingElement()) {
             const std::string compType = compElement->Name();  // Use tag name directly as component type
 
-            SDL_Log("Creating component of type %s", compType.c_str());
+            /*SDL_Log("Creating component of type %s", compType.c_str());*/
             auto component = ComponentLibrary().createComponent(compType, *gameObject, compElement);
 
             if (component) {
                 gameObject->addComponent(std::move(component)); // Use addComponent again
-                SDL_Log("Added component of type %s", compType.c_str());
+                /*SDL_Log("Added component of type %s", compType.c_str());*/
                 componentAdded = true;
             }
             else {
-                SDL_Log("Failed to create component of type %s", compType.c_str());
+                /*SDL_Log("Failed to create component of type %s", compType.c_str());*/
             }
         }
 
         // Only add GameObject to engine if it has at least one component
         if (componentAdded) {
             Engine::addGameObject(std::move(gameObject));
-            SDL_Log("Added GameObject to engine");
+            /*SDL_Log("Added GameObject to engine");*/
         } else {
-            SDL_Log("GameObject skipped due to no components.");
+            /*SDL_Log("GameObject skipped due to no components.");*/
         }
     }
 

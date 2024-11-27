@@ -17,6 +17,7 @@ public:
 
     void setSpeed(float speed);
     void mouseAngle(BodyComponent* body);
+    void createBullet(double playerX, double playerY, double playerWidth, double playerHeight);
 
     void update() override;
 
