@@ -69,7 +69,7 @@ void ControllerComponent::mouseAngle(BodyComponent* body) {
     double dy = mouseY - objectY;
 
     // Calculate the angle in degrees
-    double angle = (atan2(dy, dx) * 180.0 / M_PI) - 180;
+    double angle = atan2(dy, dx) * 180.0 / M_PI;
 
     // Set the angle in the body
     body->setAngle(angle);

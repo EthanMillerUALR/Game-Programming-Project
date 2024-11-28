@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level>
 	<Object>
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<BodyComponent x="100" y="200" width="40" height="70" />
-=======
-		<BodyComponent x="100" y="200" vx="0" vy="0" angle="0" width="40" height="70" />
->>>>>>> parent of bbe773f (Updated To Complete Assignment 2)
 		<SpriteComponent texture="hero.png" />
 		<ControllerComponent speed="150" />	
 	</Object>
 	<Object>
-		<BodyComponent x="100" y="400" vx="0" vy="0" angle="0" />
+		<BodyComponent x="100" y="400" />
 		<SpriteComponent texture="zombie.png" />
 		<SlideComponent speed="200" leftx="100" rightx="200" />
 	</Object>
 	<Object>
-		<BodyComponent x="300" y="200" vx="0" vy="0" angle="0" width="100" />
+		<BodyComponent x="300" y="200" width="100" />
 		<SpriteComponent texture="zombie.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="500" y="300" vx="0" vy="0" angle="0" width="100" height="100" />
+		<BodyComponent x="500" y="400" width="100" height="100" />
 		<SpriteComponent texture="grass.png" />
-=======
-		<BodyComponent x="100" y="200" vx="0" vy="0" angle="0" width="40" height="70" />
-		<SpriteComponent texture="dino.png" />
-		<ControllerComponent speed="150" />	
 	</Object>
 	<Object>
-		<BodyComponent x="100" y="400" vx="0" vy="0" angle="0" />
-		<SpriteComponent texture="squirrel.png" />
-		<SlideComponent speed="200" leftx="100" rightx="200" />
+		<BodyComponent x="0" y="0" width="800" height="10" />
+		<SpriteComponent texture="wall.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="300" y="200" vx="0" vy="0" angle="0" width="100" />
-		<SpriteComponent texture="squirrel.png" />
->>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
+		<BodyComponent x="0" y="0" width="10" height="600" />
+		<SpriteComponent texture="wall.png" />
+	</Object>
+	<Object>
+		<BodyComponent x="790" y="0" width="10" height="600" />
+		<SpriteComponent texture="wall.png" />
+	</Object>
+	<Object>
+		<BodyComponent x="0" y="590" width="800" height="10" />
+		<SpriteComponent texture="wall.png" />
 	</Object>
 </Level>

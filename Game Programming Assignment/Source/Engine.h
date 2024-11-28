@@ -80,10 +80,10 @@ public:
 
         if (deltaX != 0 || deltaY != 0) {
             view.moveView(deltaX, deltaY);
-            std::cout << "View position updated: (" << view.getViewX() << ", " << view.getViewY() << ")" << std::endl;
+            /*std::cout << "View position updated: (" << view.getViewX() << ", " << view.getViewY() << ")" << std::endl;*/
         }
 
-        std::cout << "View Position: (" << view.getViewX() << ", " << view.getViewY() << ")\n";
+        /*std::cout << "View Position: (" << view.getViewX() << ", " << view.getViewY() << ")\n";*/
 
 
         for (auto& gameObject : gameObjects) {
