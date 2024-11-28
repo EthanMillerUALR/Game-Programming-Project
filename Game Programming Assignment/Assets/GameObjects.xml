@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level>
 	<Object>
+<<<<<<< HEAD
 		<BodyComponent x="100" y="200" width="40" height="70" />
 		<SpriteComponent texture="hero.png" />
 		<ControllerComponent speed="150" />	
@@ -17,6 +18,20 @@
 	<Object>
 		<BodyComponent x="500" y="300" width="100" height="100" />
 		<SpriteComponent texture="grass.png" />
+=======
+		<BodyComponent x="100" y="200" vx="0" vy="0" angle="0" width="40" height="70" />
+		<SpriteComponent texture="dino.png" />
+		<ControllerComponent speed="150" />	
+	</Object>
+	<Object>
+		<BodyComponent x="100" y="400" vx="0" vy="0" angle="0" />
+		<SpriteComponent texture="squirrel.png" />
+		<SlideComponent speed="200" leftx="100" rightx="200" />
+	</Object>
+	<Object>
+		<BodyComponent x="300" y="200" vx="0" vy="0" angle="0" width="100" />
+		<SpriteComponent texture="squirrel.png" />
+>>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
 	</Object>
 	<Object>
 		<BodyComponent x="0" y="0" width="800" height="10" />

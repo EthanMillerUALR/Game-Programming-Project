@@ -135,7 +135,6 @@
     <ClCompile Include="Source\ComponentLibrary.cpp" />
     <ClCompile Include="Source\BodyComponent.cpp" />
     <ClCompile Include="Source\SlideComponent.cpp" />
-    <ClCompile Include="Source\BulletComponent.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
     <ClCompile Include="Source\Textures.cpp" />
   </ItemGroup>
@@ -146,7 +145,6 @@
     <ClInclude Include="Source\GameObject.h" />
     <ClInclude Include="Source\ControllerComponent.h" />
     <ClInclude Include="Source\ComponentLibrary.h" />
-    <ClInclude Include="Source\BulletComponent.h" />
     <ClInclude Include="Source\View.h" />
     <ClInclude Include="Source\Input.h" />
     <ClInclude Include="Source\SlideComponent.h" />
@@ -154,11 +152,6 @@
     <ClInclude Include="Source\Textures.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\Images\bullet.png" />
-    <Image Include="Assets\Images\grass.png" />
-    <Image Include="Assets\Images\hero.png" />
-    <Image Include="Assets\Images\wall.png" />
-    <Image Include="Assets\Images\zombie.png" />
     <Image Include="Temp\squirrel.png">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
     </Image>

@@ -80,10 +80,10 @@ public:
 
         if (deltaX != 0 || deltaY != 0) {
             view.moveView(deltaX, deltaY);
-            /*std::cout << "View position updated: (" << view.getViewX() << ", " << view.getViewY() << ")" << std::endl;*/
+            std::cout << "View position updated: (" << view.getViewX() << ", " << view.getViewY() << ")" << std::endl;
         }
 
-        /*std::cout << "View Position: (" << view.getViewX() << ", " << view.getViewY() << ")\n";*/
+        std::cout << "View Position: (" << view.getViewX() << ", " << view.getViewY() << ")\n";
 
 
         for (auto& gameObject : gameObjects) {
@@ -121,12 +121,7 @@ public:
 
     // Add a GameObject to the engine (static)
     static void addGameObject(std::unique_ptr<GameObject> gameObject) {
-        if (!gameObject) {
-            std::cerr << "Error: Attempted to add a null GameObject to the Engine." << std::endl;
-            return;
-        }
-
-        gameObjects.push_back(std::move(gameObject)); // Add the game object to the list
+        gameObjects.push_back(std::move(gameObject));  // Add the game object to the list
     }
 
     // Run the engine (static)
@@ -171,14 +166,14 @@ private:
     static SDL_Window* window;                           // SDL window (static)
     static SDL_Renderer* renderer;                       // SDL renderer (static)
     static std::vector<std::unique_ptr<GameObject>> gameObjects;  // Track game objects
-    //static std::vector<GameObject*> toAdd;
-    //static std::vector<GameObject*> toDelete;
-
-    //Added toAdd and toDelete
-    //Any time i add an object, instead of adding it directly, I add it toAdd
-    //any time I delete an object, i add it to toDelete
-    //after the update loop, check to see if things are in toAdd or toDelete, and do that to them
 
     static Uint64 lastTicks;
     static double deltaTime;     // Time elapsed between frames
 };
+
+//REMEMBER: The view class should be simple to start, just keep track of the x and y
+//Some possible Ideas: Keep Track Of Character Movements
+
+//Engine will keep track of an view x and a view y where you are looking
+//Whenever something is being drawn, you can just subtract off the view x and view y
+//Now if you change the view x and view y, the camera will move

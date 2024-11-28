@@ -42,9 +42,6 @@
     <ClCompile Include="Source\SpriteComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\BulletComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Component.h">
@@ -80,27 +77,9 @@
     <ClInclude Include="Source\View.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\BulletComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Temp\squirrel.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Assets\Images\hero.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Assets\Images\zombie.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Assets\Images\bullet.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Assets\Images\wall.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Assets\Images\grass.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

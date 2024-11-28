@@ -46,10 +46,18 @@ void Engine::loadLevel(const std::string& levelPath) {
         for (tinyxml2::XMLElement* compElement = elem->FirstChildElement(); compElement != nullptr; compElement = compElement->NextSiblingElement()) {
             const std::string compType = compElement->Name();  // Use tag name directly as component type
 
+<<<<<<< HEAD
+=======
+            SDL_Log("Creating component of type %s", compType.c_str());
+>>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
             auto component = ComponentLibrary().createComponent(compType, *gameObject, compElement);
 
             if (component) {
                 gameObject->addComponent(std::move(component)); // Use addComponent again
+<<<<<<< HEAD
+=======
+                SDL_Log("Added component of type %s", compType.c_str());
+>>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
                 componentAdded = true;
             }
             else {
@@ -60,8 +68,12 @@ void Engine::loadLevel(const std::string& levelPath) {
         // Only add GameObject to engine if it has at least one component
         if (componentAdded) {
             Engine::addGameObject(std::move(gameObject));
+<<<<<<< HEAD
+=======
+            SDL_Log("Added GameObject to engine");
+>>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
         } else {
-            /*SDL_Log("GameObject skipped due to no components.");*/
+            SDL_Log("GameObject skipped due to no components.");
         }
     }
 
