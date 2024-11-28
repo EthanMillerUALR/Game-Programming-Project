@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  ComponentLibrary.cpp
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SlideComponent.h(13,54): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   (compiling source file 'Source/ComponentLibrary.cpp')
@@ -78,6 +79,9 @@ C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Program
   Generating Code...
 =======
 >>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
+=======
+﻿  BulletComponent.cpp
+>>>>>>> parent of bbe773f (Updated To Complete Assignment 2)
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

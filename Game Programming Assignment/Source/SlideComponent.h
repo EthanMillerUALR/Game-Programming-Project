@@ -23,14 +23,6 @@ public:
         if (spacePressed && !spaceWasPressed) {
             isActive = !isActive;
             std::cout << (isActive ? "Movement activated" : "Movement deactivated") << std::endl;
-
-            // If movement is deactivated, stop the object
-            if (!isActive) {
-                auto body = parent().get<BodyComponent>();
-                if (body) {
-                    body->setVelocity(0.0, body->vy()); // Stop horizontal movement
-                }
-            }
         }
 
         spaceWasPressed = spacePressed;

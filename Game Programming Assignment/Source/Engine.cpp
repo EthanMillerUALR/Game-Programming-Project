@@ -35,7 +35,7 @@ void Engine::loadLevel(const std::string& levelPath) {
 
     // Process each Object element in the XML
     for (tinyxml2::XMLElement* elem = root->FirstChildElement("Object"); elem != nullptr; elem = elem->NextSiblingElement("Object")) {
-        SDL_Log("Creating a new GameObject");
+        /*SDL_Log("Creating a new GameObject");*/
 
         // Create a blank GameObject
         auto gameObject = std::make_unique<GameObject>();
@@ -47,21 +47,29 @@ void Engine::loadLevel(const std::string& levelPath) {
             const std::string compType = compElement->Name();  // Use tag name directly as component type
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             SDL_Log("Creating component of type %s", compType.c_str());
 >>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
+=======
+            /*SDL_Log("Creating component of type %s", compType.c_str());*/
+>>>>>>> parent of bbe773f (Updated To Complete Assignment 2)
             auto component = ComponentLibrary().createComponent(compType, *gameObject, compElement);
 
             if (component) {
                 gameObject->addComponent(std::move(component)); // Use addComponent again
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 SDL_Log("Added component of type %s", compType.c_str());
 >>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
+=======
+                /*SDL_Log("Added component of type %s", compType.c_str());*/
+>>>>>>> parent of bbe773f (Updated To Complete Assignment 2)
                 componentAdded = true;
             }
             else {
-                SDL_Log("Failed to create component of type %s", compType.c_str());
+                /*SDL_Log("Failed to create component of type %s", compType.c_str());*/
             }
         }
 
@@ -69,9 +77,13 @@ void Engine::loadLevel(const std::string& levelPath) {
         if (componentAdded) {
             Engine::addGameObject(std::move(gameObject));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             SDL_Log("Added GameObject to engine");
 >>>>>>> parent of 2bd2efb (Added the start of dynamically spawning bullets)
+=======
+            /*SDL_Log("Added GameObject to engine");*/
+>>>>>>> parent of bbe773f (Updated To Complete Assignment 2)
         } else {
             SDL_Log("GameObject skipped due to no components.");
         }
