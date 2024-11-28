@@ -3,3 +3,8 @@
 *.idb
 *.tlog
 *.recipe
+*.json
+*.vsidx
+*.ipch
+*.json
+*.db
