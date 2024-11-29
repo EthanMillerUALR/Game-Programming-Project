@@ -16,7 +16,7 @@ public:
     static std::unique_ptr<Component> create(GameObject& parent, tinyxml2::XMLElement* element);
 
     void setSpeed(float speed);
-    void mouseAngle(BodyComponent* body);
+    void mouseAngle(b2Body* body);
 
     void update() override;
 
@@ -25,7 +25,7 @@ public:
 private:
     double moveSpeed;  // Speed of the movement
 
-    void checkBounds(BodyComponent* body);
+    void checkBounds(b2Body* body);
 
 };
 

@@ -24,16 +24,19 @@ void SpriteComponent::draw() {
         return;
     }
 
-    auto body = parent().get<BodyComponent>();
+    b2Body* body = parent().getBody();
     if (body) {
         bodyMissingLogged = false;
 
-        int width = body->getWidth();
-        int height = body->getHeight();
+        // Get the size of the sprite from the BodyComponent (if relevant)
+        BodyComponent* bodyComponent = parent().get<BodyComponent>();
+        int width = bodyComponent ? bodyComponent->getWidth() : 0;
+        int height = bodyComponent ? bodyComponent->getHeight() : 0;
 
-        // Adjust sprite's position based on the View's center
-        double drawX = body->x() - Engine::view.getViewX();
-        double drawY = body->y() - Engine::view.getViewY();
+        // Use the Box2D body's position, adjusted for the View
+        const b2Vec2& position = body->GetPosition();
+        double drawX = position.x - Engine::view.getViewX();
+        double drawY = position.y - Engine::view.getViewY();
 
         SDL_Rect dst = {
             static_cast<int>(drawX),
@@ -42,7 +45,8 @@ void SpriteComponent::draw() {
             height
         };
 
-        float angle = body->angle();
+        // Get the angle of the body for rotation
+        float angle = body->GetAngle() * (180.0f / M_PI); // Convert from radians to degrees
         SDL_Point center = { width / 2, height / 2 };
 
         if (SDL_RenderCopyEx(Engine::getRenderer(), texture, nullptr, &dst, angle, &center, SDL_FLIP_NONE) != 0) {

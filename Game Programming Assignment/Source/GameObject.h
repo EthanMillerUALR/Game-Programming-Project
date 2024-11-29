@@ -10,7 +10,7 @@
 
 class GameObject {
 public:
-    GameObject() : userData(nullptr), body(nullptr) {}  // Default constructor
+    GameObject() : body(nullptr) {}  // Default constructor
 
     // Add a component to the GameObject by type, using variadic arguments to forward them.
     template <typename T, typename... Args>
@@ -65,18 +65,7 @@ public:
         }
     }
 
-    // Set user data (for GameObject).
-    void setUserData(void* data) {
-        userData = data;
-    }
-
-    // Get user data (for GameObject).
-    void* getUserData() const {
-        return userData;
-    }
-
 private:
-    void* userData;  // Pointer to hold any user-defined data (can be cast to appropriate type as needed)
     b2Body* body;    // Store the Box2D body directly in GameObject
     std::vector<std::unique_ptr<Component>> components; // Store components in a vector
 };

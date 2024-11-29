@@ -17,11 +17,10 @@ void ControllerComponent::setSpeed(float speed) {
 }
 
 void ControllerComponent::update() {
-    auto body = parent().get<BodyComponent>();
+    b2Body* body = parent().getBody();
     if (!body) return;
 
-    body->setVelocity(0, 0);
-    std::string message;
+    body->SetLinearVelocity(b2Vec2(0, 0));
 
     double newSpeed = (moveSpeed * Engine::getDeltaTime()) / 2;
 
@@ -30,22 +29,22 @@ void ControllerComponent::update() {
     bool leftPressed = Input::isKeyDown(SDLK_a);
     bool rightPressed = Input::isKeyDown(SDLK_d);
 
+    b2Vec2 velocity(0, 0);
     if (upPressed) {
-        body->setVelocity(body->vx(), -newSpeed);
+        velocity.y -= newSpeed;
     }
     if (downPressed) {
-        body->setVelocity(body->vx(), newSpeed);
+        velocity.y += newSpeed;
     }
     if (leftPressed) {
-        body->setVelocity(-newSpeed, body->vy());
+        velocity.x -= newSpeed;
     }
     if (rightPressed) {
-        body->setVelocity(newSpeed, body->vy());
+        velocity.x += newSpeed;
     }
 
-    if (!message.empty()) {
-        std::cout << message << std::endl;
-    }
+    body->SetLinearVelocity(velocity);
+
     mouseAngle(body);
 
 
@@ -53,7 +52,7 @@ void ControllerComponent::update() {
 }
 
 
-void ControllerComponent::mouseAngle(BodyComponent* body) {
+void ControllerComponent::mouseAngle(b2Body* body) {
     // Get mouse position
 
     int mouseX;
@@ -61,8 +60,9 @@ void ControllerComponent::mouseAngle(BodyComponent* body) {
     std::tie(mouseX, mouseY) = Input::getMousePosition();
 
     // Get object's current position
-    double objectX = body->x() + (body->getWidth() / 2); // Center of the object
-    double objectY = body->y() + (body->getHeight() / 2);
+    b2Vec2 position = body->GetPosition();
+    double objectX = position.x;
+    double objectY = position.y;
 
     // Calculate the difference in position
     double dx = mouseX - objectX;
@@ -72,30 +72,30 @@ void ControllerComponent::mouseAngle(BodyComponent* body) {
     double angle = atan2(dy, dx) * 180.0 / M_PI;
 
     // Set the angle in the body
-    body->setAngle(angle);
+    body->SetTransform(body->GetPosition(), static_cast<float>(angle));
 }
 
-void ControllerComponent::checkBounds(BodyComponent* body) {
+void ControllerComponent::checkBounds(b2Body* body) {
     const int screenWidth = Engine::width;
     const int screenHeight = Engine::height;
 
-    double newX = body->x() + body->vx();
-    double newY = body->y() + body->vy();
+    b2Vec2 position = body->GetPosition();
+    float newX = position.x;
+    float newY = position.y;
 
     if (newX < 0) {
         newX = 0;
     }
-    else if (newX + body->getWidth() > screenWidth) {
-        newX = screenWidth - body->getWidth();
+    else if (newX > screenWidth) {
+        newX = static_cast<float>(screenWidth);
     }
 
     if (newY < 0) {
         newY = 0;
     }
-    else if (newY + body->getHeight() > screenHeight) {
-        newY = screenHeight - body->getHeight();
+    else if (newY > screenHeight) {
+        newY = static_cast<float>(screenHeight);
     }
 
-    body->x() = newX;
-    body->y() = newY;
+    body->SetTransform(b2Vec2(newX, newY), body->GetAngle());
 }

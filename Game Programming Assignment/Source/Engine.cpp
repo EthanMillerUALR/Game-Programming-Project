@@ -1,4 +1,7 @@
 #include "Engine.h"
+#include "GameObject.h"
+#include "BodyComponent.h"  // Include to use BodyComponent if needed
+
 
 // Definition of static members
 bool Engine::isRunning = false;
@@ -45,6 +48,14 @@ void Engine::loadLevel(const std::string& levelPath) {
         // Create a blank GameObject
         auto gameObject = std::make_unique<GameObject>();
 
+        //// Create the b2Body here based on the GameObject's position and any other properties
+        //b2BodyDef bodyDef;
+        //bodyDef.position.Set(0, 0); // Set position based on GameObject properties
+        //bodyDef.angle = 0; // Set angle if needed
+
+        //b2Body* body = Engine::world->CreateBody(&bodyDef);
+        //gameObject->setBody(body); // Assign the body to the GameObject
+
         bool componentAdded = false;
 
         // Add components to GameObject based on XML
@@ -57,8 +68,10 @@ void Engine::loadLevel(const std::string& levelPath) {
                 componentAdded = true;
             }
             else {
+                SDL_Log("Component creation failed for: %s", compType.c_str());
             }
         }
+
 
         // Only add GameObject to engine if it has at least one component
         if (componentAdded) {
