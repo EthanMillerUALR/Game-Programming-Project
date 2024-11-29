@@ -17,7 +17,6 @@ SDL_Texture* Textures::getOrLoad(const std::string& textureKey, const std::strin
     SDL_Texture* newTexture = IMG_LoadTexture(renderer, fileName.c_str());
     if (newTexture) {
         textures[textureKey] = newTexture; // Cache the texture
-        SDL_Log("Loaded texture: %s", fileName.c_str()); // Log successful load
     }
     else {
         SDL_Log("Failed to load texture: %s, Error: %s", fileName.c_str(), SDL_GetError());

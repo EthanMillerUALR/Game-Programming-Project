@@ -13,6 +13,12 @@ double Engine::deltaTime = 0.0;
 
 View Engine::view; // Define the static View instance
 
+b2World* Engine::world = nullptr;  // Initialize the Box2D world pointer
+b2Vec2 Engine::gravity(0.0f, 0.0f);  // Default gravity vector (downward)
+
+std::vector<GameObject*> Engine::toBeAdded;
+std::vector<GameObject*> Engine::toBeDeleted;
+
 Engine::Engine(const std::string& levelPath)
 {
     std::cout << "Loading level from: " << levelPath << std::endl;
@@ -66,8 +72,14 @@ void Engine::loadLevel(const std::string& levelPath) {
     SDL_Log("Level loading completed from %s", levelPath.c_str());
 }
 
-// New frame timing methods (Not Needed, To Be Simplified/Deleted)
 double Engine::getDeltaTime() {
     return deltaTime;
+}
+
+void Engine::scheduleAddGameObject(GameObject* gameObject) {
+    toBeAdded.push_back(gameObject);
+}
+void Engine::scheduleDeleteGameObject(GameObject* gameObject) {
+    toBeDeleted.push_back(gameObject);
 }
 

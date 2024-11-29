@@ -25,10 +25,10 @@ void ControllerComponent::update() {
 
     double newSpeed = (moveSpeed * Engine::getDeltaTime()) / 2;
 
-    bool upPressed = Input::isKeyDown(SDLK_UP);
-    bool downPressed = Input::isKeyDown(SDLK_DOWN);
-    bool leftPressed = Input::isKeyDown(SDLK_LEFT);
-    bool rightPressed = Input::isKeyDown(SDLK_RIGHT);
+    bool upPressed = Input::isKeyDown(SDLK_w);
+    bool downPressed = Input::isKeyDown(SDLK_s);
+    bool leftPressed = Input::isKeyDown(SDLK_a);
+    bool rightPressed = Input::isKeyDown(SDLK_d);
 
     if (upPressed) {
         body->setVelocity(body->vx(), -newSpeed);

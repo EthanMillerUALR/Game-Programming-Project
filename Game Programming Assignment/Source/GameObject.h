@@ -13,6 +13,9 @@ int getID() {
 
 class GameObject {
 public:
+
+    GameObject() : userData(nullptr) {}  // Default constructor
+
     // Add a component to the GameObject by type, using variadic arguments to forward them.
     template <typename T, typename... Args>
     void add(Args&&... args) {
@@ -53,7 +56,18 @@ public:
         }
     }
 
+    // Set user data (for GameObject).
+    void setUserData(void* data) {
+        userData = data;
+    }
+
+    // Get user data (for GameObject).
+    void* getUserData() const {
+        return userData;
+    }
+
 private:
+    void* userData;  // Pointer to hold any user-defined data (can be cast to appropriate type as needed)
     std::vector<std::unique_ptr<Component>> components; // Changed to vector for simpler iteration
 };
 

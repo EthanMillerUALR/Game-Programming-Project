@@ -10,6 +10,8 @@
 #include "ComponentLibrary.h"
 #include "tinyxml2.h"  // Include the XML parser
 #include "View.h"
+#include <SDL2/SDL.h>
+#include <box2d/box2d.h> // Include Box2D
 
 class ComponentLibrary;
 class Engine {
@@ -44,6 +46,8 @@ public:
             SDL_Log("Failed to create renderer: %s", SDL_GetError());
             return false;
         }
+
+        world = new b2World(gravity);  // Use the gravity defined in the header
 
         isRunning = true;
         return true;
@@ -82,6 +86,34 @@ public:
             view.moveView(deltaX, deltaY);
         }
 
+        //// Add new GameObjects
+        //for (GameObject* gameObject : toBeAdded) {
+        //    gameObjects.push_back(std::unique_ptr<GameObject>(gameObject));  // Wrap raw pointer in unique_ptr
+        //}
+        //toBeAdded.clear();  // Clear the added objects
+
+
+        //// Delete specified GameObjects
+        //for (GameObject* object : toBeDeleted) {
+        //    auto it = std::remove_if(gameObjects.begin(), gameObjects.end(),
+        //        [object](GameObject* obj) {
+        //            return obj == object;
+        //        });
+
+        //    if (it != gameObjects.end()) {
+        //        gameObjects.erase(it, gameObjects.end());
+        //        delete object;  // Free the memory for deleted object
+        //    }
+        //}
+        //toBeDeleted.clear();  // Clear the deleted objects
+
+        // Step the Box2D world
+        float timeStep = static_cast<float>(deltaTime);  // Convert to Box2D float type
+        const int32 velocityIterations = 8;  // Recommended value
+        const int32 positionIterations = 3;  // Recommended value
+        if (world) {
+            world->Step(timeStep, velocityIterations, positionIterations);
+        }
 
         for (auto& gameObject : gameObjects) {
             gameObject->update();  // Update each GameObject
@@ -107,6 +139,10 @@ public:
         }
         if (window) {
             SDL_DestroyWindow(window);
+        }
+        if (world) {
+            delete world;  // Clean up Box2D world
+            world = nullptr;
         }
         SDL_Quit();
     }
@@ -158,19 +194,21 @@ public:
     }
     static double getDeltaTime();  // Getter for deltaTime
 
+    static void scheduleAddGameObject(GameObject* gameObject);
+    static void scheduleDeleteGameObject(GameObject* gameObject);
+
 private:
     static bool isRunning;                               // Engine running state (static)
     static SDL_Window* window;                           // SDL window (static)
     static SDL_Renderer* renderer;                       // SDL renderer (static)
     static std::vector<std::unique_ptr<GameObject>> gameObjects;  // Track game objects
+    static std::vector<GameObject*> toBeAdded;
+    static std::vector<GameObject*> toBeDeleted;
 
     static Uint64 lastTicks;
     static double deltaTime;     // Time elapsed between frames
+
+    // Box2D world and gravity
+    static b2World* world;  // Pointer to the Box2D world
+    static b2Vec2 gravity;  // Gravity vector
 };
-
-//REMEMBER: The view class should be simple to start, just keep track of the x and y
-//Some possible Ideas: Keep Track Of Character Movements
-
-//Engine will keep track of an view x and a view y where you are looking
-//Whenever something is being drawn, you can just subtract off the view x and view y
-//Now if you change the view x and view y, the camera will move
