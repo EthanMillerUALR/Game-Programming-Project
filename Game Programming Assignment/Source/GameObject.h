@@ -5,22 +5,17 @@
 #include <stdexcept>
 #include <iostream>
 #include "Component.h"
-
-template <typename T>
-int getID() {
-    return std::hash<std::type_index>()(std::type_index(typeid(T)));
-}
+#include <vector>
+#include "box2d/box2d.h"  // Include the main Box2D header file
 
 class GameObject {
 public:
-
-    GameObject() : userData(nullptr) {}  // Default constructor
+    GameObject() : userData(nullptr), body(nullptr) {}  // Default constructor
 
     // Add a component to the GameObject by type, using variadic arguments to forward them.
     template <typename T, typename... Args>
     void add(Args&&... args) {
         static_assert(std::is_base_of<Component, T>::value, "T must be derived from Component");
-        int id = getID<T>();
         components.push_back(std::make_unique<T>(*this, std::forward<Args>(args)...));
     }
 
@@ -32,7 +27,7 @@ public:
     // Get a component by type as a raw pointer.
     template <typename T>
     T* get() {
-        int id = getID<T>();
+        // Iterate through components and return the first match
         for (auto& comp : components) {
             T* castedComp = dynamic_cast<T*>(comp.get());
             if (castedComp) {
@@ -40,6 +35,20 @@ public:
             }
         }
         return nullptr;
+    }
+
+    // Set the b2Body for this GameObject
+    void setBody(b2Body* newBody) {
+        body = newBody;
+        // Set the userData for Box2D to point to this GameObject
+        if (body) {
+            body->SetUserData(this);  // Point to the GameObject itself
+        }
+    }
+
+    // Get the b2Body associated with this GameObject
+    b2Body* getBody() const {
+        return body;
     }
 
     // Update all components.
@@ -68,6 +77,7 @@ public:
 
 private:
     void* userData;  // Pointer to hold any user-defined data (can be cast to appropriate type as needed)
-    std::vector<std::unique_ptr<Component>> components; // Changed to vector for simpler iteration
+    b2Body* body;    // Store the Box2D body directly in GameObject
+    std::vector<std::unique_ptr<Component>> components; // Store components in a vector
 };
 

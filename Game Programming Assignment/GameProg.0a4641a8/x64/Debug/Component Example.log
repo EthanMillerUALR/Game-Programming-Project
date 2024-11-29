@@ -8,19 +8,6 @@ C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Program
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SlideComponent.h(52,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Source/ComponentLibrary.cpp')
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source/ComponentLibrary.cpp')
-      C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40):
-      the template instantiation context (the oldest one first) is
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SlideComponent.h(29,38):
-          see reference to function template instantiation 'T *GameObject::get<BodyComponent>(void)' being compiled
-          with
-          [
-              T=BodyComponent
-          ]
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(35,18):
-          see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
-  
   ControllerComponent.cpp
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ControllerComponent.cpp(34,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ControllerComponent.cpp(37,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
@@ -35,19 +22,6 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.3412
       the template instantiation context (the oldest one first) is
           C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ControllerComponent.cpp(11,27):
           see reference to function template instantiation 'std::unique_ptr<ControllerComponent,std::default_delete<ControllerComponent>> std::make_unique<ControllerComponent,GameObject&,double&,0>(GameObject &,double &)' being compiled
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source/ControllerComponent.cpp')
-      C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40):
-      the template instantiation context (the oldest one first) is
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ControllerComponent.cpp(20,26):
-          see reference to function template instantiation 'T *GameObject::get<BodyComponent>(void)' being compiled
-          with
-          [
-              T=BodyComponent
-          ]
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(35,18):
-          see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
   
   Engine.cpp
   SlideComponent.cpp
@@ -67,33 +41,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.3412
           C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SlideComponent.cpp(8,17):
           see reference to function template instantiation 'std::unique_ptr<SlideComponent,std::default_delete<SlideComponent>> std::make_unique<SlideComponent,GameObject&,double&,int&,int&,0>(GameObject &,double &,int &,int &)' being compiled
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source/SlideComponent.cpp')
-      C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40):
-      the template instantiation context (the oldest one first) is
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SlideComponent.h(29,38):
-          see reference to function template instantiation 'T *GameObject::get<BodyComponent>(void)' being compiled
-          with
-          [
-              T=BodyComponent
-          ]
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(35,18):
-          see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
-  
   SpriteComponent.cpp
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Source/SpriteComponent.cpp')
-      C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(11,40):
-      the template instantiation context (the oldest one first) is
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\SpriteComponent.cpp(27,26):
-          see reference to function template instantiation 'T *GameObject::get<BodyComponent>(void)' being compiled
-          with
-          [
-              T=BodyComponent
-          ]
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\GameObject.h(35,18):
-          see reference to function template instantiation 'int getID<BodyComponent>(void)' being compiled
-  
   main.cpp
   Generating Code...
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
