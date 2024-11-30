@@ -86,38 +86,18 @@ public:
             view.moveView(deltaX, deltaY);
         }
 
-        //// Add new GameObjects
-        //for (GameObject* gameObject : toBeAdded) {
-        //    gameObjects.push_back(std::unique_ptr<GameObject>(gameObject));  // Wrap raw pointer in unique_ptr
-        //}
-        //toBeAdded.clear();  // Clear the added objects
-
-
-        //// Delete specified GameObjects
-        //for (GameObject* object : toBeDeleted) {
-        //    auto it = std::remove_if(gameObjects.begin(), gameObjects.end(),
-        //        [object](GameObject* obj) {
-        //            return obj == object;
-        //        });
-
-        //    if (it != gameObjects.end()) {
-        //        gameObjects.erase(it, gameObjects.end());
-        //        delete object;  // Free the memory for deleted object
-        //    }
-        //}
-        //toBeDeleted.clear();  // Clear the deleted objects
-
         // Step the Box2D world
-        float timeStep = static_cast<float>(deltaTime);  // Convert to Box2D float type
-        const int32 velocityIterations = 8;  // Recommended value
-        const int32 positionIterations = 3;  // Recommended value
         if (world) {
-            world->Step(timeStep, velocityIterations, positionIterations);
+            world->Step(static_cast<float>(deltaTime), 8, 3);  // Box2D step
         }
 
         for (auto& gameObject : gameObjects) {
             gameObject->update();  // Update each GameObject
         }
+
+        // Process additions and deletions after all game objects are updated
+        processScheduledAdditions();
+        processScheduledDeletions();
     }
 
     // Render all game objects (static)
@@ -150,11 +130,6 @@ public:
     // Check if the engine is still running (static)
     static bool running() {
         return isRunning;
-    }
-
-    // Add a GameObject to the engine (static)
-    static void addGameObject(std::unique_ptr<GameObject> gameObject) {
-        gameObjects.push_back(std::move(gameObject));  // Add the game object to the list
     }
 
     // Run the engine (static)
@@ -194,8 +169,44 @@ public:
     }
     static double getDeltaTime();  // Getter for deltaTime
 
-    static void scheduleAddGameObject(GameObject* gameObject);
-    static void scheduleDeleteGameObject(GameObject* gameObject);
+    // Add a GameObject to the engine
+    static void addGameObject(std::unique_ptr<GameObject> gameObject) {
+        gameObjects.push_back(std::move(gameObject));  // Add the game object to the list
+    }
+
+    // Schedule a GameObject for addition
+    static void scheduleAddGameObject(GameObject* gameObject) {
+        toBeAdded.push_back(gameObject);
+    }
+
+    // Schedule a GameObject for deletion
+    static void scheduleDeleteGameObject(GameObject* gameObject) {
+        toBeDeleted.push_back(gameObject);
+    }
+
+    // Process additions after the main game loop
+    static void processScheduledAdditions() {
+        for (GameObject* gameObject : toBeAdded) {
+            gameObjects.push_back(std::unique_ptr<GameObject>(gameObject));  // Add new GameObject
+        }
+        toBeAdded.clear();  // Clear the scheduled additions list
+    }
+
+    // Process deletions after the main game loop
+    static void processScheduledDeletions() {
+        for (GameObject* gameObject : toBeDeleted) {
+            // Find and remove the GameObject from gameObjects list
+            auto it = std::remove_if(gameObjects.begin(), gameObjects.end(),
+                [gameObject](const std::unique_ptr<GameObject>& obj) {
+                    return obj.get() == gameObject;  // Compare raw pointers
+                });
+            if (it != gameObjects.end()) {
+                gameObjects.erase(it, gameObjects.end());
+                delete gameObject;  // Clean up memory for deleted object
+            }
+        }
+        toBeDeleted.clear();  // Clear the scheduled deletions list
+    }   
 
 private:
     static bool isRunning;                               // Engine running state (static)

@@ -29,11 +29,15 @@ public:
     int getWidth() const { return width; }
     int getHeight() const { return height; }
 
+    void setBodyType(b2BodyType type) { bodyType = type; }
+    b2BodyType getBodyType() const { return bodyType; }
+
     void update() override;
     void draw() override {}
 
 private:
     int width;   // Width of the object
     int height;  // Height of the object  
+    b2BodyType bodyType = b2_dynamicBody; // Default body type
 };
 

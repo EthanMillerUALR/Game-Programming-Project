@@ -47,25 +47,21 @@ void Engine::loadLevel(const std::string& levelPath) {
 
         // Create a blank GameObject
         auto gameObject = std::make_unique<GameObject>();
-
-        //// Create the b2Body here based on the GameObject's position and any other properties
-        //b2BodyDef bodyDef;
-        //bodyDef.position.Set(0, 0); // Set position based on GameObject properties
-        //bodyDef.angle = 0; // Set angle if needed
-
-        //b2Body* body = Engine::world->CreateBody(&bodyDef);
-        //gameObject->setBody(body); // Assign the body to the GameObject
+        SDL_Log("Creating GameObject...");
 
         bool componentAdded = false;
 
         // Add components to GameObject based on XML
         for (tinyxml2::XMLElement* compElement = elem->FirstChildElement(); compElement != nullptr; compElement = compElement->NextSiblingElement()) {
             const std::string compType = compElement->Name();  // Use tag name directly as component type
+            SDL_Log("Adding component: %s", compType.c_str());
+
             auto component = ComponentLibrary().createComponent(compType, *gameObject, compElement);
 
             if (component) {
                 gameObject->addComponent(std::move(component)); // Use addComponent again
                 componentAdded = true;
+                SDL_Log("Component %s added successfully", compType.c_str());
             }
             else {
                 SDL_Log("Component creation failed for: %s", compType.c_str());
@@ -75,7 +71,7 @@ void Engine::loadLevel(const std::string& levelPath) {
 
         // Only add GameObject to engine if it has at least one component
         if (componentAdded) {
-            Engine::addGameObject(std::move(gameObject));
+            Engine::scheduleAddGameObject(gameObject.release());
         } else {
             SDL_Log("GameObject skipped due to no components.");
         }
@@ -87,12 +83,5 @@ void Engine::loadLevel(const std::string& levelPath) {
 
 double Engine::getDeltaTime() {
     return deltaTime;
-}
-
-void Engine::scheduleAddGameObject(GameObject* gameObject) {
-    toBeAdded.push_back(gameObject);
-}
-void Engine::scheduleDeleteGameObject(GameObject* gameObject) {
-    toBeDeleted.push_back(gameObject);
 }
 

@@ -7,6 +7,7 @@
 #include "Component.h"
 #include <vector>
 #include "box2d/box2d.h"  // Include the main Box2D header file
+#include "BodyComponent.h"
 
 class GameObject {
 public:
@@ -17,12 +18,14 @@ public:
     void add(Args&&... args) {
         static_assert(std::is_base_of<Component, T>::value, "T must be derived from Component");
         components.push_back(std::make_unique<T>(*this, std::forward<Args>(args)...));
+        std::cout << "Added component of type: " << typeid(T).name() << std::endl;
     }
 
     // Add a pre-created component to the GameObject
     void addComponent(std::unique_ptr<Component> component) {
         components.push_back(std::move(component));
     }
+
 
     // Get a component by type as a raw pointer.
     template <typename T>
@@ -37,18 +40,16 @@ public:
         return nullptr;
     }
 
-    // Set the b2Body for this GameObject
-    void setBody(b2Body* newBody) {
-        body = newBody;
-        // Set the userData for Box2D to point to this GameObject
-        if (body) {
-            body->SetUserData(this);  // Point to the GameObject itself
+    template <typename T>
+    T* getComponent() {
+        // Iterate through the components and check if the type matches
+        for (auto& comp : components) {
+            T* castedComp = dynamic_cast<T*>(comp.get());
+            if (castedComp) {
+                return castedComp;  // Return the component if found
+            }
         }
-    }
-
-    // Get the b2Body associated with this GameObject
-    b2Body* getBody() const {
-        return body;
+        return nullptr;  // Return nullptr if no component of the requested type is found
     }
 
     // Update all components.
@@ -65,8 +66,30 @@ public:
         }
     }
 
+    // Set the b2Body for this GameObject
+    void setBody(b2Body* newBody) {
+        body = newBody;
+        // Set the userData for Box2D to point to this GameObject
+        if (body) {
+            body->SetUserData(this);
+            //std::cout << "b2Body successfully assigned to GameObject." << std::endl;
+        }
+        else {
+            //std::cout << "Failed to assign b2Body to GameObject." << std::endl;
+        }
+    }
+
+    // Get the b2Body associated with this GameObject
+    b2Body* getBody() const {
+        return body;
+    }
+
+    void initializeBody(const BodyComponent& bodyComponent) {
+
+    }
+
 private:
-    b2Body* body;    // Store the Box2D body directly in GameObject
+    b2Body* body = nullptr;    // Store the Box2D body directly in GameObject
     std::vector<std::unique_ptr<Component>> components; // Store components in a vector
 };
 

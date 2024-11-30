@@ -1,4 +1,16 @@
-﻿  Engine.cpp
+﻿  BodyComponent.cpp
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\BodyComponent.cpp(27,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\BodyComponent.cpp(27,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\BodyComponent.cpp(27,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\BodyComponent.cpp(28,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\BodyComponent.cpp(28,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3597,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Source/BodyComponent.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3597,56):
+      the template instantiation context (the oldest one first) is
+          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\BodyComponent.cpp(22,27):
+          see reference to function template instantiation 'std::unique_ptr<BodyComponent,std::default_delete<BodyComponent>> std::make_unique<BodyComponent,GameObject&,double&,double&,int&,int&,double&,double&,double&,0>(GameObject &,double &,double &,int &,int &,double &,double &,double &)' being compiled
+  
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
