@@ -1,6 +1,7 @@
 #include "BodyComponent.h"
 #include "GameObject.h"
 #include <SDL2/SDL.h>
+#include "Engine.h"
 
 
 std::unique_ptr<Component> BodyComponent::create(GameObject& parent, tinyxml2::XMLElement* element)
@@ -19,16 +20,28 @@ std::unique_ptr<Component> BodyComponent::create(GameObject& parent, tinyxml2::X
     double vy = element->DoubleAttribute("vy", 0.0f);
     double angle = element->DoubleAttribute("angle", 0.0f);
 
-    auto component = std::make_unique<BodyComponent>(parent, x, y, width, height, vx, vy, angle);
-    component->setBodyType(bodyType); // Store the body type in the component
+    b2World* world = Engine::getWorld();
 
-    // If the GameObject has a b2Body, set its initial state
-    if (auto* body = parent.getBody()) {
-        body->SetTransform(b2Vec2(x, y), angle);
-        body->SetLinearVelocity(b2Vec2(vx, vy));
+    if (world)
+    {
+        parent.initializeBody(*world, x, y, width, height, bodyType);  // Assuming you have a valid world pointer here
+
+        auto component = std::make_unique<BodyComponent>(parent, x, y, width, height, vx, vy, angle);
+        component->setBodyType(bodyType); // Store the body type in the component
+
+        // If the GameObject has a b2Body, set its initial state
+        if (auto* body = parent.getBody()) {
+            body->SetTransform(b2Vec2(x, y), angle);
+            body->SetLinearVelocity(b2Vec2(vx, vy));
+        }
+
+        return component;
     }
-
-    return component;
+    else {
+        // Handle the case where world is not initialized
+        std::cerr << "Error: b2World is not initialized!" << std::endl;
+        return nullptr;
+    }
 }
 
 float BodyComponent::getX() const {

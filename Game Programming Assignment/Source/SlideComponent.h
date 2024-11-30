@@ -49,7 +49,7 @@ public:
                 }
 
                 // Keep velocity consistent, boundaries will naturally limit movement
-                double movement = slideSpeed * Engine::getDeltaTime();
+                double movement = slideSpeed;
                 b2Vec2 velocity = body->GetLinearVelocity();
                 velocity.x = goingRight ? movement : -movement;
                 body->SetLinearVelocity(velocity);

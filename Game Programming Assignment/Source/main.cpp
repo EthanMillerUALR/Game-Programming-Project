@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Load level from XML file and create the Engine instance
-    Engine engine("Assets/GameObjects.xml");  // Initializes the engine and loads the level
+    Engine engine("Assets/XMLFiles/Level1.xml");  // Initializes the engine and loads the level
 
     // Run the game loop
     engine.run();  // Start the game loop

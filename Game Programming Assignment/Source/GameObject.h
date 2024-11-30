@@ -72,7 +72,7 @@ public:
         // Set the userData for Box2D to point to this GameObject
         if (body) {
             body->SetUserData(this);
-            //std::cout << "b2Body successfully assigned to GameObject." << std::endl;
+            std::cout << "b2Body successfully assigned to GameObject." << std::endl;
         }
         else {
             //std::cout << "Failed to assign b2Body to GameObject." << std::endl;
@@ -84,8 +84,29 @@ public:
         return body;
     }
 
-    void initializeBody(const BodyComponent& bodyComponent) {
+    void initializeBody(b2World& world, float x, float y, float width, float height, b2BodyType type) {
+        if (body != nullptr) {
+            // Body is already initialized
+            return;
+        }
 
+        b2BodyDef bodyDef;
+        bodyDef.type = type;
+        bodyDef.position.Set(x, y);
+
+        // Create the body in the Box2D world
+        body = world.CreateBody(&bodyDef);
+
+        b2PolygonShape shape;
+        shape.SetAsBox(width / 2.0f, height / 2.0f);  // Assuming the width and height are the dimensions of a box
+
+        b2FixtureDef fixtureDef;
+        fixtureDef.shape = &shape;
+        fixtureDef.density = 1.0f;
+        fixtureDef.friction = 0.3f;
+
+        // Add the fixture to the body
+        body->CreateFixture(&fixtureDef);
     }
 
 private:

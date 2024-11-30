@@ -25,8 +25,6 @@ public:
 private:
     double moveSpeed;  // Speed of the movement
 
-    void checkBounds(b2Body* body);
-
 };
 
 

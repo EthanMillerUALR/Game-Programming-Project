@@ -85,20 +85,32 @@
     <Image Include="Assets\Images\bullet.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Assets\Images\grass.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Assets\Images\hero.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Assets\Images\wall.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Assets\Images\zombie.png">
+    <Image Include="Assets\Images\walker.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Images\grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Images\boss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Images\runner.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Images\tank.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Assets\GameObjects.xml" />
+    <Xml Include="Assets\XMLFiles\Level1.xml" />
+    <Xml Include="Assets\XMLFiles\Level2.xml" />
+    <Xml Include="Assets\XMLFiles\Level3.xml" />
+    <Xml Include="Assets\XMLFiles\Level4.xml" />
   </ItemGroup>
 </Project>

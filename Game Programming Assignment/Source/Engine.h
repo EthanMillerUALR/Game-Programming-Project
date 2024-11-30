@@ -208,6 +208,8 @@ public:
         toBeDeleted.clear();  // Clear the scheduled deletions list
     }   
 
+    static b2World* getWorld() { return world; }
+
 private:
     static bool isRunning;                               // Engine running state (static)
     static SDL_Window* window;                           // SDL window (static)

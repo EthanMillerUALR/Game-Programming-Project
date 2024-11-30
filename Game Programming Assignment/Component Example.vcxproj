@@ -152,17 +152,23 @@
     <ClInclude Include="Source\Textures.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\Images\boss.png" />
     <Image Include="Assets\Images\bullet.png" />
     <Image Include="Assets\Images\grass.png" />
     <Image Include="Assets\Images\hero.png" />
+    <Image Include="Assets\Images\runner.png" />
+    <Image Include="Assets\Images\tank.png" />
     <Image Include="Assets\Images\wall.png" />
-    <Image Include="Assets\Images\zombie.png" />
+    <Image Include="Assets\Images\walker.png" />
     <Image Include="Temp\squirrel.png">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Assets\GameObjects.xml" />
+    <Xml Include="Assets\XMLFiles\Level1.xml" />
+    <Xml Include="Assets\XMLFiles\Level2.xml" />
+    <Xml Include="Assets\XMLFiles\Level4.xml" />
+    <Xml Include="Assets\XMLFiles\Level3.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
