@@ -107,6 +107,9 @@ public:
 
         // Add the fixture to the body
         body->CreateFixture(&fixtureDef);
+
+        //// Now set the userData using the setBody function
+        //setBody(body);  // Call the setBody function to assign the userData
     }
 
 private:

@@ -36,4 +36,5 @@
 - To Be Filled In
 
 ### Project 4
+- **The Engine Has Now Been Integrated To Produce A Box2d World, And All Game Objects Are Integrated With Box2d Bodies**
 - 

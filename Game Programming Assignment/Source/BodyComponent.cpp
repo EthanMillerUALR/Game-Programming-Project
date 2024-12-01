@@ -106,6 +106,4 @@ void BodyComponent::setAngle(float angle) {
 }
 
 void BodyComponent::update() {
-    // No need to synchronize GameObject properties with the body anymore,
-    // as we directly update the body in the GameObject's setBody() method.
 }

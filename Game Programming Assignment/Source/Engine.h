@@ -12,6 +12,7 @@
 #include "View.h"
 #include <SDL2/SDL.h>
 #include <box2d/box2d.h> // Include Box2D
+#include "GameContactListener.h"
 
 class ComponentLibrary;
 class Engine {
@@ -47,7 +48,8 @@ public:
             return false;
         }
 
-        world = new b2World(gravity);  // Use the gravity defined in the header
+        world = new b2World(gravity);
+        world->SetContactListener(&contactListener);  // Assign the contact listener
 
         isRunning = true;
         return true;
@@ -224,4 +226,6 @@ private:
     // Box2D world and gravity
     static b2World* world;  // Pointer to the Box2D world
     static b2Vec2 gravity;  // Gravity vector
+
+    static GameContactListener contactListener; // Declare a contact listener
 };

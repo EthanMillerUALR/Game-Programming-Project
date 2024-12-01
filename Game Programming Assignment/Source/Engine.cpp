@@ -22,6 +22,8 @@ b2Vec2 Engine::gravity(0.0f, 0.0f);  // Default gravity vector (downward)
 std::vector<GameObject*> Engine::toBeAdded;
 std::vector<GameObject*> Engine::toBeDeleted;
 
+GameContactListener Engine::contactListener;
+
 Engine::Engine(const std::string& levelPath)
 {
     std::cout << "Loading level from: " << levelPath << std::endl;

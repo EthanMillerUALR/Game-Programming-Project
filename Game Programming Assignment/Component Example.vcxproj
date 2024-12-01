@@ -135,6 +135,7 @@
     <ClCompile Include="Source\ComponentLibrary.cpp" />
     <ClCompile Include="Source\BodyComponent.cpp" />
     <ClCompile Include="Source\SlideComponent.cpp" />
+    <ClCompile Include="Source\GameContactListener.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
     <ClCompile Include="Source\Textures.cpp" />
   </ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="Source\GameObject.h" />
     <ClInclude Include="Source\ControllerComponent.h" />
     <ClInclude Include="Source\ComponentLibrary.h" />
+    <ClInclude Include="Source\GameContactListener.h" />
     <ClInclude Include="Source\View.h" />
     <ClInclude Include="Source\Input.h" />
     <ClInclude Include="Source\SlideComponent.h" />
