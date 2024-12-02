@@ -17,7 +17,7 @@ public:
 
     void setSpeed(float speed);
     void mouseAngle(b2Body* body);
-    //void spawnBullet();  // New function to spawn a bullet
+    void spawnBullet();  // New function to spawn a bullet
 
     void update() override;
 

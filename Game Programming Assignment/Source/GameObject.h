@@ -71,7 +71,7 @@ public:
         body = newBody;
         // Set the userData for Box2D to point to this GameObject
         if (body) {
-            body->SetUserData(this);
+            body->GetUserData().pointer = uintptr_t(this);
             std::cout << "b2Body successfully assigned to GameObject." << std::endl;
         }
         else {
@@ -108,8 +108,8 @@ public:
         // Add the fixture to the body
         body->CreateFixture(&fixtureDef);
 
-        //// Now set the userData using the setBody function
-        //setBody(body);  // Call the setBody function to assign the userData
+        // Now set the userData using the setBody function
+        setBody(body);  // Call the setBody function to assign the userData
     }
 
 private:

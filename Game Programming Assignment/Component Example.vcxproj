@@ -134,6 +134,7 @@
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\ComponentLibrary.cpp" />
     <ClCompile Include="Source\BodyComponent.cpp" />
+    <ClCompile Include="Source\ComponentBullet.cpp" />
     <ClCompile Include="Source\ZombieComponent.cpp" />
     <ClCompile Include="Source\GameContactListener.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="Source\Component.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\GameObject.h" />
+    <ClInclude Include="Source\ComponentBullet.h" />
     <ClInclude Include="Source\HeroComponent.h" />
     <ClInclude Include="Source\ComponentLibrary.h" />
     <ClInclude Include="Source\GameContactListener.h" />
@@ -154,14 +156,14 @@
     <ClInclude Include="Source\Textures.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\Images\boss.png" />
-    <Image Include="Assets\Images\bullet.png" />
-    <Image Include="Assets\Images\grass.png" />
-    <Image Include="Assets\Images\hero.png" />
-    <Image Include="Assets\Images\runner.png" />
-    <Image Include="Assets\Images\tank.png" />
-    <Image Include="Assets\Images\wall.png" />
-    <Image Include="Assets\Images\walker.png" />
+    <Image Include="Assets\Images\Boss.png" />
+    <Image Include="Assets\Images\Bullet.png" />
+    <Image Include="Assets\Images\Grass.png" />
+    <Image Include="Assets\Images\Hero.png" />
+    <Image Include="Assets\Images\Runner.png" />
+    <Image Include="Assets\Images\Tank.png" />
+    <Image Include="Assets\Images\Wall.png" />
+    <Image Include="Assets\Images\Walker.png" />
     <Image Include="Temp\squirrel.png">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
     </Image>
