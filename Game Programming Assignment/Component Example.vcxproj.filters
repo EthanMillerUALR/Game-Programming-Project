@@ -33,10 +33,10 @@
     <ClCompile Include="Source\BodyComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ControllerComponent.cpp">
+    <ClCompile Include="Source\HeroComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\SlideComponent.cpp">
+    <ClCompile Include="Source\ZombieComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\SpriteComponent.cpp">
@@ -68,10 +68,10 @@
     <ClInclude Include="Source\Textures.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\SlideComponent.h">
+    <ClInclude Include="Source\ZombieComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ControllerComponent.h">
+    <ClInclude Include="Source\HeroComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\ComponentLibrary.h">

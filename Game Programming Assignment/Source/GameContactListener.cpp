@@ -1,7 +1,7 @@
 #include "GameContactListener.h"
 #include "GameObject.h"
-#include "ControllerComponent.h"
-#include "SlideComponent.h"
+#include "HeroComponent.h"
+#include "ZombieComponent.h"
 #include <iostream>
 
 
@@ -16,11 +16,11 @@ void GameContactListener::BeginContact(b2Contact* contact) {
 
     // Check if the game objects are valid
     if (gameObjectA && gameObjectB) {
-        // Check if one has a ControllerComponent and the other has a SlideComponent
-        if (gameObjectA->getComponent<ControllerComponent>() && gameObjectB->getComponent<SlideComponent>()) {
+        // Check if one has a HeroComponent and the other has a ZombieComponent
+        if (gameObjectA->getComponent<HeroComponent>() && gameObjectB->getComponent<ZombieComponent>()) {
             std::cout << "The hero has collided with a zombie!" << std::endl;
         }
-        else if (gameObjectB->getComponent<ControllerComponent>() && gameObjectA->getComponent<SlideComponent>()) {
+        else if (gameObjectB->getComponent<HeroComponent>() && gameObjectA->getComponent<ZombieComponent>()) {
             std::cout << "The hero has collided with a zombie!" << std::endl;
         }
     }

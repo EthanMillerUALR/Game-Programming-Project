@@ -128,13 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\ControllerComponent.cpp" />
+    <ClCompile Include="Source\HeroComponent.cpp" />
     <ClCompile Include="Source\Engine.cpp" />
     <ClCompile Include="Source\Input.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\ComponentLibrary.cpp" />
     <ClCompile Include="Source\BodyComponent.cpp" />
-    <ClCompile Include="Source\SlideComponent.cpp" />
+    <ClCompile Include="Source\ZombieComponent.cpp" />
     <ClCompile Include="Source\GameContactListener.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
     <ClCompile Include="Source\Textures.cpp" />
@@ -144,12 +144,12 @@
     <ClInclude Include="Source\Component.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\GameObject.h" />
-    <ClInclude Include="Source\ControllerComponent.h" />
+    <ClInclude Include="Source\HeroComponent.h" />
     <ClInclude Include="Source\ComponentLibrary.h" />
     <ClInclude Include="Source\GameContactListener.h" />
     <ClInclude Include="Source\View.h" />
     <ClInclude Include="Source\Input.h" />
-    <ClInclude Include="Source\SlideComponent.h" />
+    <ClInclude Include="Source\ZombieComponent.h" />
     <ClInclude Include="Source\SpriteComponent.h" />
     <ClInclude Include="Source\Textures.h" />
   </ItemGroup>

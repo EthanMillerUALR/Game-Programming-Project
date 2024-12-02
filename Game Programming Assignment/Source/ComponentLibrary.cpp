@@ -1,15 +1,15 @@
 #include "ComponentLibrary.h"
 #include "BodyComponent.h" 
-#include "ControllerComponent.h"  
-#include "SlideComponent.h"   
+#include "HeroComponent.h"  
+#include "ZombieComponent.h"   
 #include "SpriteComponent.h"   
 
 
 ComponentLibrary::ComponentLibrary()
 {
     componentFactory["BodyComponent"] = BodyComponent::create;
-    componentFactory["ControllerComponent"] = ControllerComponent::create;
-    componentFactory["SlideComponent"] = SlideComponent::create;
+    componentFactory["HeroComponent"] = HeroComponent::create;
+    componentFactory["ZombieComponent"] = ZombieComponent::create;
     componentFactory["SpriteComponent"] = SpriteComponent::create;
 }
 
