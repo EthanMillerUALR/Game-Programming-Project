@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level1.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Assets\\XMLFiles\\Level1.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\GameContactListener.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\HeroComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\BodyComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\BodyComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\GameContactListener.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -35,12 +19,51 @@
       "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentLibrary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\utility||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\BodyComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\HeroComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level1.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Assets\\XMLFiles\\Level1.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentLibrary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level3.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Assets\\XMLFiles\\Level3.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level4.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Assets\\XMLFiles\\Level4.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\BodyComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -53,14 +76,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\HeroComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\GameContactListener.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\GameContactListener.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -77,10 +92,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\ComponentLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|solutionrelative:Source\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4641A8-CCEC-4466-B96E-C5C82F7F1E47}|Component Example.vcxproj|C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -134,180 +145,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Engine.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.cpp",
-              "RelativeDocumentMoniker": "Source\\Engine.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.cpp",
-              "RelativeToolTip": "Source\\Engine.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE8AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-24T01:01:23.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ComponentBullet.h",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.h",
-              "RelativeDocumentMoniker": "Source\\ComponentBullet.h",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.h",
-              "RelativeToolTip": "Source\\ComponentBullet.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-02T16:05:20.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ComponentBullet.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.cpp",
-              "RelativeDocumentMoniker": "Source\\ComponentBullet.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.cpp",
-              "RelativeToolTip": "Source\\ComponentBullet.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-02T16:04:23.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BodyComponent.h",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.h",
-              "RelativeDocumentMoniker": "Source\\BodyComponent.h",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.h",
-              "RelativeToolTip": "Source\\BodyComponent.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-24T20:18:57.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BodyComponent.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.cpp",
-              "RelativeDocumentMoniker": "Source\\BodyComponent.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.cpp",
-              "RelativeToolTip": "Source\\BodyComponent.cpp",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-06T02:09:07.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HeroComponent.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.cpp",
-              "RelativeDocumentMoniker": "Source\\HeroComponent.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.cpp",
-              "RelativeToolTip": "Source\\HeroComponent.cpp",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHgAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-06T02:26:57.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Level1.xml",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level1.xml",
               "RelativeDocumentMoniker": "Assets\\XMLFiles\\Level1.xml",
               "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level1.xml",
               "RelativeToolTip": "Assets\\XMLFiles\\Level1.xml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
               "WhenOpened": "2024-12-02T02:39:49.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Engine.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.h",
               "RelativeDocumentMoniker": "Source\\Engine.h",
               "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.h",
               "RelativeToolTip": "Source\\Engine.h",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAMMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-24T20:18:35.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ComponentLibrary.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.cpp",
-              "RelativeDocumentMoniker": "Source\\ComponentLibrary.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.cpp",
-              "RelativeToolTip": "Source\\ComponentLibrary.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-05T21:32:33.602Z",
+              "DocumentIndex": 9,
+              "Title": "ComponentBullet.h",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.h",
+              "RelativeDocumentMoniker": "Source\\ComponentBullet.h",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.h",
+              "RelativeToolTip": "Source\\ComponentBullet.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-02T16:05:20.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "GameObject.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameObject.h",
               "RelativeDocumentMoniker": "Source\\GameObject.h",
               "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameObject.h",
               "RelativeToolTip": "Source\\GameObject.h",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-24T20:19:33.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ZombieComponent.h",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.h",
-              "RelativeDocumentMoniker": "Source\\ZombieComponent.h",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.h",
-              "RelativeToolTip": "Source\\ZombieComponent.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-24T01:01:33.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ZombieComponent.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.cpp",
-              "RelativeDocumentMoniker": "Source\\ZombieComponent.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.cpp",
-              "RelativeToolTip": "Source\\ZombieComponent.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Engine.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.cpp",
+              "RelativeDocumentMoniker": "Source\\Engine.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Engine.cpp",
+              "RelativeToolTip": "Source\\Engine.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-06T02:28:05.87Z",
+              "WhenOpened": "2024-10-24T01:01:23.049Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HeroComponent.h",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.h",
-              "RelativeDocumentMoniker": "Source\\HeroComponent.h",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.h",
-              "RelativeToolTip": "Source\\HeroComponent.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-04T02:50:02.18Z",
+              "DocumentIndex": 0,
+              "Title": "GameContactListener.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.cpp",
+              "RelativeDocumentMoniker": "Source\\GameContactListener.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.cpp",
+              "RelativeToolTip": "Source\\GameContactListener.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-01T01:33:27.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "GameContactListener.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.h",
               "RelativeDocumentMoniker": "Source\\GameContactListener.h",
@@ -320,72 +240,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BodyComponent.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\BodyComponent.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.cpp",
+              "RelativeToolTip": "Source\\BodyComponent.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAFMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T02:09:07.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HeroComponent.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\HeroComponent.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.cpp",
+              "RelativeToolTip": "Source\\HeroComponent.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T02:26:57.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "utility",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\utility",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\utility",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\utility",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\utility",
+              "ViewState": "AgIAAN8CAAAAAAAAAIAwwPACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-03T18:44:30.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ComponentBullet.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.cpp",
+              "RelativeDocumentMoniker": "Source\\ComponentBullet.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentBullet.cpp",
+              "RelativeToolTip": "Source\\ComponentBullet.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T16:04:23.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ComponentLibrary.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.cpp",
+              "RelativeDocumentMoniker": "Source\\ComponentLibrary.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.cpp",
+              "RelativeToolTip": "Source\\ComponentLibrary.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-05T21:32:33.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "GameContactListener.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.cpp",
-              "RelativeDocumentMoniker": "Source\\GameContactListener.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\GameContactListener.cpp",
-              "RelativeToolTip": "Source\\GameContactListener.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-01T01:33:27.965Z",
+              "Title": "Level3.xml",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level3.xml",
+              "RelativeDocumentMoniker": "Assets\\XMLFiles\\Level3.xml",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level3.xml",
+              "RelativeToolTip": "Assets\\XMLFiles\\Level3.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-12-03T18:07:43.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Input.h",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.h",
-              "RelativeDocumentMoniker": "Source\\Input.h",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.h",
-              "RelativeToolTip": "Source\\Input.h",
-              "ViewState": "AgIAAA4AAAAAAAAAAABRwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-24T20:19:56.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Input.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.cpp",
-              "RelativeDocumentMoniker": "Source\\Input.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.cpp",
-              "RelativeToolTip": "Source\\Input.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-24T01:01:26.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SpriteComponent.cpp",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\SpriteComponent.cpp",
-              "RelativeDocumentMoniker": "Source\\SpriteComponent.cpp",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\SpriteComponent.cpp",
-              "RelativeToolTip": "Source\\SpriteComponent.cpp",
-              "ViewState": "AgIAABwAAAAAAAAAAABBwCkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-06T02:29:13.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ComponentLibrary.h",
-              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.h",
-              "RelativeDocumentMoniker": "Source\\ComponentLibrary.h",
-              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.h",
-              "RelativeToolTip": "Source\\ComponentLibrary.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-05T21:32:06.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 12,
               "Title": "Component.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Component.h",
               "RelativeDocumentMoniker": "Source\\Component.h",
@@ -398,7 +331,124 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Level4.xml",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level4.xml",
+              "RelativeDocumentMoniker": "Assets\\XMLFiles\\Level4.xml",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\XMLFiles\\Level4.xml",
+              "RelativeToolTip": "Assets\\XMLFiles\\Level4.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-12-03T18:07:56.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BodyComponent.h",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.h",
+              "RelativeDocumentMoniker": "Source\\BodyComponent.h",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BodyComponent.h",
+              "RelativeToolTip": "Source\\BodyComponent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-24T20:18:57.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ZombieComponent.h",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.h",
+              "RelativeDocumentMoniker": "Source\\ZombieComponent.h",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.h",
+              "RelativeToolTip": "Source\\ZombieComponent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-24T01:01:33.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ZombieComponent.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\ZombieComponent.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ZombieComponent.cpp",
+              "RelativeToolTip": "Source\\ZombieComponent.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T02:28:05.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HeroComponent.h",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.h",
+              "RelativeDocumentMoniker": "Source\\HeroComponent.h",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\HeroComponent.h",
+              "RelativeToolTip": "Source\\HeroComponent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-04T02:50:02.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Input.h",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.h",
+              "RelativeDocumentMoniker": "Source\\Input.h",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.h",
+              "RelativeToolTip": "Source\\Input.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBZwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-24T20:19:56.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Input.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.cpp",
+              "RelativeDocumentMoniker": "Source\\Input.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Input.cpp",
+              "RelativeToolTip": "Source\\Input.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-24T01:01:26.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "SpriteComponent.cpp",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\SpriteComponent.cpp",
+              "RelativeDocumentMoniker": "Source\\SpriteComponent.cpp",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\SpriteComponent.cpp",
+              "RelativeToolTip": "Source\\SpriteComponent.cpp",
+              "ViewState": "AgIAABoAAAAAAAAAAABRwCkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-06T02:29:13.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ComponentLibrary.h",
+              "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.h",
+              "RelativeDocumentMoniker": "Source\\ComponentLibrary.h",
+              "ToolTip": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\ComponentLibrary.h",
+              "RelativeToolTip": "Source\\ComponentLibrary.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-05T21:32:06.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "View.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\View.h",
               "RelativeDocumentMoniker": "Source\\View.h",
@@ -411,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\main.cpp",
               "RelativeDocumentMoniker": "Source\\main.cpp",
@@ -424,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Textures.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Textures.h",
               "RelativeDocumentMoniker": "Source\\Textures.h",
@@ -437,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "SpriteComponent.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\SpriteComponent.h",
               "RelativeDocumentMoniker": "Source\\SpriteComponent.h",
@@ -450,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "Textures.cpp",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\Textures.cpp",
               "RelativeDocumentMoniker": "Source\\Textures.cpp",
@@ -463,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "BulletComponent.h",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BulletComponent.h",
               "RelativeDocumentMoniker": "Source\\BulletComponent.h",
@@ -474,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "BulletComponent.cpp",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Source\\BulletComponent.cpp",
               "RelativeDocumentMoniker": "Source\\BulletComponent.cpp",
@@ -486,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
@@ -498,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "Walker.png",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Project\\Game-Programming-Project\\Game Programming Assignment\\Assets\\Images\\Walker.png",
               "RelativeDocumentMoniker": "Assets\\Images\\Walker.png",
@@ -510,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "squirrel.png",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Assignment\\Temp\\squirrel.png",
               "RelativeDocumentMoniker": "..\\..\\..\\Game Programming Assignment\\Temp\\squirrel.png",
@@ -521,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "dino.png",
               "DocumentMoniker": "C:\\Users\\15015\\Documents\\School\\Fall 2024\\Intro to Game Programming\\Game Programming Assignment\\Temp\\dino.png",
               "RelativeDocumentMoniker": "..\\..\\..\\Game Programming Assignment\\Temp\\dino.png",
@@ -532,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\15015\\AppData\\Local\\Temp\\ce15885c-ed18-4aab-b5b0-a679b2b13592_Components.zip.592\\main.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\ce15885c-ed18-4aab-b5b0-a679b2b13592_Components.zip.592\\main.cpp",

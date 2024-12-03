@@ -183,8 +183,17 @@ public:
 
     // Schedule a GameObject for deletion
     static void scheduleDeleteGameObject(GameObject* gameObject) {
-        toBeDeleted.push_back(gameObject);
+        // If the GameObject has a b2Body, destroy it
+        if (auto body = gameObject->getBody()) {
+            if (world) {
+                world->DestroyBody(body);  // Destroy the body from the Box2D world
+            }
+            gameObject->setBody(nullptr);  // Nullify the pointer to avoid dangling
+        }
+
+        toBeDeleted.push_back(gameObject);  // Schedule the GameObject for deletion
     }
+
 
     // Process additions after the main game loop
     static void processScheduledAdditions() {
@@ -197,18 +206,22 @@ public:
     // Process deletions after the main game loop
     static void processScheduledDeletions() {
         for (GameObject* gameObject : toBeDeleted) {
-            // Find and remove the GameObject from gameObjects list
+            // Remove the GameObject from the active list
             auto it = std::remove_if(gameObjects.begin(), gameObjects.end(),
                 [gameObject](const std::unique_ptr<GameObject>& obj) {
                     return obj.get() == gameObject;  // Compare raw pointers
                 });
+
             if (it != gameObjects.end()) {
                 gameObjects.erase(it, gameObjects.end());
-                delete gameObject;  // Clean up memory for deleted object
             }
+
+            // Clean up memory for the deleted object
+            delete gameObject;
         }
         toBeDeleted.clear();  // Clear the scheduled deletions list
-    }   
+    }
+
 
     static b2World* getWorld() { return world; }
 

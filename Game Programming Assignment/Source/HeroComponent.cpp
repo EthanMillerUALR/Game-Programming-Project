@@ -126,14 +126,11 @@ void HeroComponent::spawnBullet() {
         bulletBody->SetTransform(bulletPosition, heroAngle);  // Apply the hero's angle to the bullet
     }
 
-    // Set the bullet's velocity based on the hero's direction
-    float bulletSpeed = 1000.0f; // Modify this value to adjust the bullet's speed
-    b2Vec2 bulletVelocity(cos(heroAngle) * bulletSpeed, sin(heroAngle) * bulletSpeed);
-
-    BodyComponent* bulletBodyComponent = bullet->getComponent<BodyComponent>();
-    if (bulletBodyComponent) {
-        bulletBodyComponent->setVelocity(bulletVelocity.x, bulletVelocity.y);  // Set velocity in the correct direction
-    }
+    // Add a BulletComponent to manage lifetime and velocity
+    float bulletLifetime = 5.0f;         // Bullet disappears after 5 seconds
+    float bulletSpeed = 1000.0f;         // Speed of the bullet
+    auto gunBullet = std::make_unique<BulletComponent>(*bullet, bulletLifetime, bulletSpeed, direction.x, direction.y);
+    bullet->addComponent(std::move(gunBullet));
 
     // Add the bullet to the Engine
     Engine::scheduleAddGameObject(bullet);

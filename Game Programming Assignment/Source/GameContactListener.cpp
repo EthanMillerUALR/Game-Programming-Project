@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include "HeroComponent.h"
 #include "ZombieComponent.h"
+#include "ComponentBullet.h"
 #include <iostream>
 
 
@@ -22,6 +23,12 @@ void GameContactListener::BeginContact(b2Contact* contact) {
         }
         else if (gameObjectB->getComponent<HeroComponent>() && gameObjectA->getComponent<ZombieComponent>()) {
             std::cout << "The hero has collided with a zombie!" << std::endl;
+        }
+        else if (gameObjectB->getComponent<BulletComponent>() && gameObjectA->getComponent<ZombieComponent>()) {
+            std::cout << "The bullet has collided with a zombie!" << std::endl;
+        }
+        else if (gameObjectB->getComponent<ZombieComponent>() && gameObjectA->getComponent<BulletComponent>()) {
+            std::cout << "The bullet has collided with a zombie!" << std::endl;
         }
     }
 }

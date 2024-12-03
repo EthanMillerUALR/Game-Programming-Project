@@ -26,6 +26,17 @@ public:
         components.push_back(std::move(component));
     }
 
+    template<typename T>
+    void removeComponent() {
+        auto it = std::remove_if(components.begin(), components.end(),
+            [](const std::unique_ptr<Component>& component) {
+                return dynamic_cast<T*>(component.get()) != nullptr;
+            });
+        if (it != components.end()) {
+            components.erase(it, components.end());  // Erase the matched component
+        }
+    }
+
 
     // Get a component by type as a raw pointer.
     template <typename T>

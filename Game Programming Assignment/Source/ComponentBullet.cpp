@@ -1,11 +1,36 @@
 #include "ComponentBullet.h"
-#include <Box2D/Box2D.h>
+#include "GameObject.h"
+#include "Engine.h"
+#include <iostream>
 
-BulletComponent::BulletComponent(GameObject& parent)
-    : Component(parent) {
+BulletComponent::BulletComponent(GameObject& parent, float lifetime, float speed, float directionX, float directionY)
+    : Component(parent), _lifetime(lifetime), _speed(speed), _direction(directionX, directionY) {}
+
+void BulletComponent::update() {
+    // Reduce lifetime
+    _lifetime -= Engine::getDeltaTime();
+    if (_lifetime <= 0) {
+        // Schedule the bullet for removal
+        Engine::scheduleDeleteGameObject(&parent());
+        std::cout << "Bullet will be expired and removed." << std::endl;
+        return;
+    }
+
+    // Move the bullet based on its direction and speed
+    auto* body = parent().getBody();  // Get the physics body from the GameObject
+    if (body) {
+        b2Vec2 velocity = _direction;
+        velocity.Normalize();  // Ensure the direction vector is a unit vector
+        velocity *= _speed;    // Scale by speed
+        body->SetLinearVelocity(velocity);  // Set the body's velocity
+    }
 }
 
-void BulletComponent::update(float deltaTime) {
-    // This could be used for bullet-specific behavior, such as lifespan or collision checks.
+void BulletComponent::draw() {
 }
+
+BulletComponent::~BulletComponent() {
+    std::cout << "BulletComponent destroyed." << std::endl;
+}
+
 
