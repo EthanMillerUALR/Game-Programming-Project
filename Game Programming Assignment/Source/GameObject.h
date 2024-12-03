@@ -72,10 +72,6 @@ public:
         // Set the userData for Box2D to point to this GameObject
         if (body) {
             body->GetUserData().pointer = uintptr_t(this);
-            std::cout << "b2Body successfully assigned to GameObject." << std::endl;
-        }
-        else {
-            //std::cout << "Failed to assign b2Body to GameObject." << std::endl;
         }
     }
 

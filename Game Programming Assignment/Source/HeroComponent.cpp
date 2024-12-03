@@ -2,6 +2,7 @@
 
 #include "Engine.h"
 #include "SpriteComponent.h"
+#include "ComponentBullet.h"
 #include <tuple>
 #include <utility>
 
@@ -45,10 +46,15 @@ void HeroComponent::update() {
     body->SetLinearVelocity(velocity);
 
     mouseAngle(body);
+    static bool mouseButtonPreviouslyPressed = false;
 
     // Spawn a bullet when the left mouse button is clicked
-    if (Input::isMouseButtonDown(SDL_BUTTON_LEFT)) {
+    if (Input::isMouseButtonDown(SDL_BUTTON_LEFT) && !mouseButtonPreviouslyPressed) {
+        mouseButtonPreviouslyPressed = true; // Mark the button as pressed
         spawnBullet();
+    }
+    else if (!Input::isMouseButtonDown(SDL_BUTTON_LEFT)) {
+        mouseButtonPreviouslyPressed = false; // Reset when the button is released
     }
 }
 
@@ -71,29 +77,67 @@ void HeroComponent::mouseAngle(b2Body* body) {
 }
 
 void HeroComponent::spawnBullet() {
-    //b2Body* heroBody = parent().getBody();
-    //if (!heroBody) return;
+    // Get the hero's body
+    b2Body* heroBody = parent().getBody();
+    BodyComponent* heroBodyComponent = parent().getComponent<BodyComponent>();
 
-    //b2Vec2 heroPosition = heroBody->GetPosition();
+    if (!heroBody || !heroBodyComponent) return;
 
-    //// Determine the direction towards the mouse position
-    //int mouseX;
-    //int mouseY;
-    //std::tie(mouseX, mouseY) = Input::getMousePosition();
-    //b2Vec2 mouseDirection(mouseX - heroPosition.x, mouseY - heroPosition.y);
-    //mouseDirection.Normalize(); // Normalize the direction vector
+    // Hero's position and angle
+    b2Vec2 heroPosition = heroBody->GetPosition();
+    float heroAngle = heroBody->GetAngle();
 
-    //// Set bullet's initial position and velocity
-    //b2Vec2 bulletPosition = heroPosition + mouseDirection; // Spawn slightly away from the hero
+    // Get the hero's width and height from the BodyComponent
+    float heroWidth = heroBodyComponent->getWidth();
+    float heroHeight = heroBodyComponent->getHeight();
 
-    //// Create the bullet GameObject
-    //auto bullet = std::make_unique<GameObject>("Bullet");
+    // Calculate the center of the hero's body
+    b2Vec2 heroCenter = heroPosition + b2Vec2(heroWidth / 2.0f, heroHeight / 2.0f);
 
-    //// Add components to the bullet (e.g., SpriteComponent, MovementComponent)
-    //bullet->addComponent(std::make_unique<SpriteComponent>(*bullet, "bullet.png"));
+    // Fixed distance from the hero to spawn the bullet (adjust as needed)
+    float spawnDistance = 30.0f;
 
-    //// Add the bullet to the Engine
-    //Engine::scheduleAddGameObject(bullet.release());
+    // Calculate the direction vector the hero is facing
+    b2Vec2 direction(cos(heroAngle), sin(heroAngle));
 
-    std::cout << "This Will Eventually Make A Bullet" << std::endl;
+    // Multiply the direction vector by the spawn distance
+    direction *= (heroWidth / 2.0f + spawnDistance);
+
+    // Offset the spawn position by a fixed distance in the direction the hero is facing
+    b2Vec2 bulletPosition = heroCenter + direction;
+
+    // Create the bullet GameObject
+    GameObject* bullet = new GameObject();
+
+    // Add a BodyComponent for physics
+    auto body = std::make_unique<BodyComponent>(*bullet, bulletPosition.x, bulletPosition.y, 20, 10, 0.0f, 0.0f, heroAngle);
+    bullet->addComponent(std::move(body));
+
+    // Add a SpriteComponent for visuals
+    auto sprite = std::make_unique<SpriteComponent>(*bullet, "Bullet.png");
+    bullet->addComponent(std::move(sprite));
+
+    // Ensure the bullet's b2Body is initialized
+    bullet->initializeBody(*Engine::getWorld(), bulletPosition.x, bulletPosition.y, 20, 10, b2_dynamicBody);
+
+    // Set the bullet's angle to match the hero's angle (bullet will now face the same direction)
+    b2Body* bulletBody = bullet->getBody();  // Retrieve the bullet's b2Body
+    if (bulletBody) {
+        bulletBody->SetTransform(bulletPosition, heroAngle);  // Apply the hero's angle to the bullet
+    }
+
+    // Set the bullet's velocity based on the hero's direction
+    float bulletSpeed = 1000.0f; // Modify this value to adjust the bullet's speed
+    b2Vec2 bulletVelocity(cos(heroAngle) * bulletSpeed, sin(heroAngle) * bulletSpeed);
+
+    BodyComponent* bulletBodyComponent = bullet->getComponent<BodyComponent>();
+    if (bulletBodyComponent) {
+        bulletBodyComponent->setVelocity(bulletVelocity.x, bulletVelocity.y);  // Set velocity in the correct direction
+    }
+
+    // Add the bullet to the Engine
+    Engine::scheduleAddGameObject(bullet);
+
+    // Print the creation message
+    std::cout << "The bullet object has been made." << std::endl;
 }

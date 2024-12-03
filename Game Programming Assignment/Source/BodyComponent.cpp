@@ -84,7 +84,6 @@ void BodyComponent::setPosition(float x, float y) {
     auto* body = parent().getBody();
     if (body) {
         body->SetTransform(b2Vec2(x, y), body->GetAngle());
-        std::cout << "Position set to: (" << x << ", " << y << ")" << std::endl;
     }
     
 }
@@ -93,7 +92,6 @@ void BodyComponent::setVelocity(float vx, float vy) {
     auto* body = parent().getBody();
     if (body) {
         body->SetLinearVelocity(b2Vec2(vx, vy));
-        std::cout << "Velocity set to: (" << vx << ", " << vy << ")" << std::endl;
     }
 }
 
@@ -101,7 +99,6 @@ void BodyComponent::setAngle(float angle) {
     auto* body = parent().getBody();
     if (body) {
         body->SetTransform(body->GetPosition(), angle);
-        std::cout << "Angle set to: " << angle << std::endl;
     }
 }
 

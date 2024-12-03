@@ -17,11 +17,6 @@
 		<SpriteComponent texture="wall.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="100" y="200" />
-		<SpriteComponent texture="hero.png" />
-		<HeroComponent speed="150" />
-	</Object>
-	<Object>
 		<BodyComponent x="100" y="400" />
 		<SpriteComponent texture="runner.png" />
 		<ZombieComponent speed="100" leftx="100" rightx="200" />

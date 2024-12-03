@@ -1,6 +1,7 @@
 #include "Engine.h"
 #include "GameObject.h"
 #include "BodyComponent.h"  // Include to use BodyComponent if needed
+#include "SpriteComponent.h"
 
 
 // Definition of static members
