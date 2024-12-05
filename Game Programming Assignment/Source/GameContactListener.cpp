@@ -22,19 +22,22 @@ void GameContactListener::BeginContact(b2Contact* contact) {
         if (gameObjectA->getComponent<HeroComponent>() && gameObjectB->getComponent<ZombieComponent>()) {
             std::cout << "The hero has collided with a zombie!" << std::endl;
             HeroComponent* heroComponent = gameObjectA->getComponent<HeroComponent>();
-            if (heroComponent) {
-                heroComponent->takeDamage(1);  // Hero takes 1 damage
+            ZombieComponent* zombieComponent = gameObjectB->getComponent<ZombieComponent>();
+            if (heroComponent && zombieComponent) {
+                int damage = zombieComponent->getDamage();  // Get the damage value from the zombie
+                heroComponent->takeDamage(damage);  // Hero takes damage
             }
         }
         else if (gameObjectA->getComponent<ZombieComponent>() && gameObjectB->getComponent<HeroComponent>()) {
             std::cout << "The hero has collided with a zombie!" << std::endl;
             HeroComponent* heroComponent = gameObjectB->getComponent<HeroComponent>();
-            if (heroComponent) {
-                heroComponent->takeDamage(1);  // Hero takes 1 damage
+            ZombieComponent* zombieComponent = gameObjectA->getComponent<ZombieComponent>();
+            if (heroComponent && zombieComponent) {
+                int damage = zombieComponent->getDamage();  // Get the damage value from the zombie
+                heroComponent->takeDamage(damage);  // Hero takes damage
             }
         }
         else if (gameObjectA->getComponent<BulletComponent>() && gameObjectB->getComponent<ZombieComponent>()) {
-            std::cout << "Bullet collided with Zombie!" << std::endl;
             Engine::scheduleDeleteGameObject(gameObjectA); // Delete the bullet
             ZombieComponent* zombieComponent = gameObjectB->getComponent<ZombieComponent>();
             if (zombieComponent) {
@@ -42,7 +45,6 @@ void GameContactListener::BeginContact(b2Contact* contact) {
             }
         }
         else if (gameObjectA->getComponent<ZombieComponent>() && gameObjectB->getComponent<BulletComponent>()) {
-            std::cout << "Bullet collided with Zombie!" << std::endl;
             Engine::scheduleDeleteGameObject(gameObjectB); // Delete the bullet
             ZombieComponent* zombieComponent = gameObjectA->getComponent<ZombieComponent>();
             if (zombieComponent) {
@@ -54,11 +56,9 @@ void GameContactListener::BeginContact(b2Contact* contact) {
         else if (gameObjectA->getComponent<HeroComponent>() && gameObjectB->getComponent<BulletComponent>()) {
         }
         else if (gameObjectA->getComponent<BulletComponent>()) {
-            std::cout << "Bullet hasn't collided with a zombie." << std::endl;
             Engine::scheduleDeleteGameObject(gameObjectA); // Delete the bullet
         }
         else if (gameObjectB->getComponent<BulletComponent>()) {
-            std::cout << "Bullet hasn't collided with a zombie." << std::endl;
             Engine::scheduleDeleteGameObject(gameObjectB); // Delete the bullet
         }
     }

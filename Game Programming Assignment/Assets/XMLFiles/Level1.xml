@@ -19,17 +19,12 @@
 	<Object>
 		<BodyComponent x="100" y="200" />
 		<SpriteComponent texture="Hero.png" />
-		<HeroComponent speed="150" health="5" />	
+		<HeroComponent speed="150" />	
 	</Object>
 	<Object>
-		<BodyComponent x="100" y="400" />
-		<SpriteComponent texture="Walker.png" />
-		<ZombieComponent speed="100" leftx="100" rightx="200" />
-	</Object>
-	<Object>
-		<BodyComponent x="300" y="200" />
+		<BodyComponent x="500" y="200" />
 		<SpriteComponent texture="Runner.png" />
-		<ZombieComponent speed="200" leftx="300" rightx="400" />
+		<ZombieComponent speed="200" health="4" />
 	</Object>
 	<Object>
 		<BodyComponent x="500" y="400" width="60" height="60" btype ="static"/>
