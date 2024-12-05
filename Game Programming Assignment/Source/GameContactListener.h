@@ -10,6 +10,8 @@ public:
 
     // Called when two fixtures cease to touch
     void EndContact(b2Contact* contact) override;
+
+    void PostSolve(b2Contact* contact, const b2ContactImpulse* impulse) override;
 };
 
 #endif // GAME_CONTACT_LISTENER_H

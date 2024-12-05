@@ -1,36 +1,19 @@
-﻿  ComponentLibrary.cpp
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(38,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Source/ComponentLibrary.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(39,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Source/ComponentLibrary.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(104,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Source/ComponentLibrary.cpp')
-  
-  GameContactListener.cpp
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(38,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+﻿  GameContactListener.cpp
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(35,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Source/GameContactListener.cpp')
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(39,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(41,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   (compiling source file 'Source/GameContactListener.cpp')
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(104,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(42,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   (compiling source file 'Source/GameContactListener.cpp')
   
-  ZombieComponent.cpp
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(38,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(118,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Source/GameContactListener.cpp')
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(39,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(138,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Source/GameContactListener.cpp')
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(104,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.cpp(17,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.cpp(21,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

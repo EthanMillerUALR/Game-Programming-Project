@@ -50,4 +50,14 @@
 - ![Boddy Deletion Code Image](ProjectScreenshots/DynamicB2bodyDeletionCode.png)
 
 ## Project 5
-- **Added AI Behavior To Zombies** (To Be Done)
+- **Added AI Behavior To Zombies**
+- ![Zombie State Code](ProjectScreenshots/HeroComponentProximityCheck.png)
+- **When Greater Than 400 Pixels Away From The Hero, Or If The Hero Does Not Exist, They Will Slide From Side To Side**
+- ![Before Pursuit Code](ProjectScreenshots/UnawareStateCode.png)
+- ![Before Pursuit Image](ProjectScreenshots/BeforeZombiePursuit.png)
+- **When The Hero Exists, And Is Within 400 Pixels, The Zombie Will Continuously Pursue The Hero**
+- ![Pursuit Code](ProjectScreenshots/AwareStateCode.png)
+- ![Pursuit Image](ProjectScreenshots/AfterZombiePursuit.png)
+- **The Contact Listener And The Damage Function For The Zombie Ensures That When Continually Contacting The Hero, The Zombie Will Damage The Hero Once Per Second**
+- ![Contact Listener Code](ContactListenerPostsolve.png)
+- ![Zombie Damage Code](ProjectScreenshots/zombieDamageWaiting.png)

@@ -55,6 +55,8 @@ void GameContactListener::BeginContact(b2Contact* contact) {
         }
         else if (gameObjectA->getComponent<HeroComponent>() && gameObjectB->getComponent<BulletComponent>()) {
         }
+        else if (gameObjectA->getComponent<BulletComponent>() && gameObjectB->getComponent<BulletComponent>()) {
+        }
         else if (gameObjectA->getComponent<BulletComponent>()) {
             Engine::scheduleDeleteGameObject(gameObjectA); // Delete the bullet
         }
@@ -66,4 +68,33 @@ void GameContactListener::BeginContact(b2Contact* contact) {
 
 void GameContactListener::EndContact(b2Contact* contact) {
     // Optional: Handle end of contact if needed
+}
+
+void GameContactListener::PostSolve(b2Contact* contact, const b2ContactImpulse* impulse)
+{   // Get the bodies involved in the collision
+    auto bodyA = contact->GetFixtureA()->GetBody();
+    auto bodyB = contact->GetFixtureB()->GetBody();
+
+    // Get the GameObjects associated with the bodies
+    GameObject* gameObjectA = reinterpret_cast<GameObject*>(bodyA->GetUserData().pointer);
+    GameObject* gameObjectB = reinterpret_cast<GameObject*>(bodyB->GetUserData().pointer);
+
+    if (gameObjectA && gameObjectB) {
+        if (gameObjectA->getComponent<HeroComponent>() && gameObjectB->getComponent<ZombieComponent>()) {
+            HeroComponent* heroComponent = gameObjectA->getComponent<HeroComponent>();
+            ZombieComponent* zombieComponent = gameObjectB->getComponent<ZombieComponent>();
+            if (heroComponent && zombieComponent) {
+                int damage = zombieComponent->getDamage();  // Get the damage value from the zombie
+                heroComponent->takeDamage(damage);  // Hero takes damage
+            }
+        }
+        else if (gameObjectA->getComponent<ZombieComponent>() && gameObjectB->getComponent<HeroComponent>()) {
+            HeroComponent* heroComponent = gameObjectB->getComponent<HeroComponent>();
+            ZombieComponent* zombieComponent = gameObjectA->getComponent<ZombieComponent>();
+            if (heroComponent && zombieComponent) {
+                int damage = zombieComponent->getDamage();  // Get the damage value from the zombie
+                heroComponent->takeDamage(damage);  // Hero takes damage
+            }
+        }
+    }
 }

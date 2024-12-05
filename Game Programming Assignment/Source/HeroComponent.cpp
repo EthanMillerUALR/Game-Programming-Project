@@ -21,9 +21,11 @@ void HeroComponent::setHealth(float initialHealth) {
     health = static_cast<float>(initialHealth);
 }
 void HeroComponent::takeDamage(int damage) {
-    std::cout << "Hero health was " << health << std::endl;
-    health -= damage;  // Reduce health
-    std::cout << "Hero took " << damage << " damage. Health now: " << health << std::endl;
+    if (damage > 0) {
+        std::cout << "Hero health was " << health << std::endl;
+        health -= damage;  // Reduce health
+        std::cout << "Hero took " << damage << " damage. Health now: " << health << std::endl;
+    }
 }
 
 void HeroComponent::update() {

@@ -169,10 +169,11 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Assets\XMLFiles\Level1.xml" />
+    <Xml Include="Assets\XMLFiles\Level0.xml" />
     <Xml Include="Assets\XMLFiles\Level2.xml" />
     <Xml Include="Assets\XMLFiles\Level4.xml" />
     <Xml Include="Assets\XMLFiles\Level3.xml" />
+    <Xml Include="Assets\XMLFiles\Level1.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
