@@ -16,7 +16,10 @@
 - ![Program Image](ProjectScreenshots/LevelXMLLoaded.png)
 
 ### Project 2 Extra Credit 
-- To Be Filled In
+- **Have Now Added The Capability For Objects To Dynamically Be Created And Destroyed**
+- ![Function Code Image](ProjectScreenshots/AddAndDeleteFunctions.png)
+- ![Update Code Image](ProjectScreenshots/AddAndDeleteUpdate.png)
+- ![Program Image](ProjectScreenshots/BulletAdditionAndDeletion.png)
 
 ### Project 3
 - **All Images Are Now Loaded Dynamically**

@@ -71,19 +71,6 @@ public:
 
         double deltaX = 0, deltaY = 0;
 
-        if (Input::isKeyDown(SDLK_LEFT)) {
-            deltaX -= 150 * Engine::getDeltaTime(); // Move view left
-        }
-        if (Input::isKeyDown(SDLK_RIGHT)) {
-            deltaX += 150 * Engine::getDeltaTime();; // Move view right
-        }
-        if (Input::isKeyDown(SDLK_UP)) {
-            deltaY -= 150 * Engine::getDeltaTime();; // Move view up
-        }
-        if (Input::isKeyDown(SDLK_DOWN)) {
-            deltaY += 150 * Engine::getDeltaTime();; // Move view down
-        }
-
         if (deltaX != 0 || deltaY != 0) {
             view.moveView(deltaX, deltaY);
         }

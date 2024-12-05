@@ -14,6 +14,23 @@ C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Program
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(138,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Source/GameContactListener.cpp')
   
+  HeroComponent.cpp
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(21,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(44,23): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(47,23): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(50,23): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(53,23): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(91,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(106,21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(107,22): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3597,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Source/HeroComponent.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3597,56):
+      the template instantiation context (the oldest one first) is
+          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(14,17):
+          see reference to function template instantiation 'std::unique_ptr<HeroComponent,std::default_delete<HeroComponent>> std::make_unique<HeroComponent,GameObject&,double&,int&,0>(GameObject &,double &,int &)' being compiled
+  
+  Generating Code...
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

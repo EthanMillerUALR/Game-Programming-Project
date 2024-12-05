@@ -20,7 +20,6 @@ void GameContactListener::BeginContact(b2Contact* contact) {
     if (gameObjectA && gameObjectB) {
         // Check if one has a HeroComponent and the other has a ZombieComponent
         if (gameObjectA->getComponent<HeroComponent>() && gameObjectB->getComponent<ZombieComponent>()) {
-            std::cout << "The hero has collided with a zombie!" << std::endl;
             HeroComponent* heroComponent = gameObjectA->getComponent<HeroComponent>();
             ZombieComponent* zombieComponent = gameObjectB->getComponent<ZombieComponent>();
             if (heroComponent && zombieComponent) {
@@ -29,7 +28,6 @@ void GameContactListener::BeginContact(b2Contact* contact) {
             }
         }
         else if (gameObjectA->getComponent<ZombieComponent>() && gameObjectB->getComponent<HeroComponent>()) {
-            std::cout << "The hero has collided with a zombie!" << std::endl;
             HeroComponent* heroComponent = gameObjectB->getComponent<HeroComponent>();
             ZombieComponent* zombieComponent = gameObjectA->getComponent<ZombieComponent>();
             if (heroComponent && zombieComponent) {
