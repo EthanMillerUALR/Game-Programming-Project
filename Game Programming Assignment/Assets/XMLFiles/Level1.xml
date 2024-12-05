@@ -22,9 +22,9 @@
 		<HeroComponent speed="150" />	
 	</Object>
 	<Object>
-		<BodyComponent x="500" y="200" />
+		<BodyComponent x="600" y="200" />
 		<SpriteComponent texture="Runner.png" />
-		<ZombieComponent speed="200" health="4" />
+		<ZombieComponent speed="200" />
 	</Object>
 	<Object>
 		<BodyComponent x="500" y="400" width="60" height="60" btype ="static"/>

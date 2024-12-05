@@ -213,6 +213,16 @@ public:
 
 
     static b2World* getWorld() { return world; }
+    template <typename T>
+    static GameObject* findGameObjectComponent() {
+        for (auto& gameObject : gameObjects) {
+            if (gameObject->hasComponent<T>()) {
+                return gameObject.get();  // Return the first GameObject with the specified component
+            }
+        }
+        return nullptr;  // Return nullptr if no such GameObject exists
+    }
+
 
 private:
     static bool isRunning;                               // Engine running state (static)

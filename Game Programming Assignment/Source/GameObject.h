@@ -63,6 +63,16 @@ public:
         return nullptr;  // Return nullptr if no component of the requested type is found
     }
 
+    template <typename T>
+    bool hasComponent() const {
+        for (const auto& comp : components) {
+            if (dynamic_cast<T*>(comp.get())) {
+                return true;  // Found the component of type T
+            }
+        }
+        return false;  // Component of type T not found
+    }
+
     // Update all components.
     void update() {
         for (auto& comp : components) {
