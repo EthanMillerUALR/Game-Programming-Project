@@ -19,7 +19,7 @@
 	<Object>
 		<BodyComponent x="100" y="200" />
 		<SpriteComponent texture="Hero.png" />
-		<HeroComponent speed="150" />	
+		<HeroComponent speed="150" health="5" />	
 	</Object>
 	<Object>
 		<BodyComponent x="100" y="400" />

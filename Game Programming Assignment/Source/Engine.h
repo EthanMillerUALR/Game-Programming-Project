@@ -183,14 +183,6 @@ public:
 
     // Schedule a GameObject for deletion
     static void scheduleDeleteGameObject(GameObject* gameObject) {
-        // If the GameObject has a b2Body, destroy it
-        if (auto body = gameObject->getBody()) {
-            if (world) {
-                world->DestroyBody(body);  // Destroy the body from the Box2D world
-            }
-            gameObject->setBody(nullptr);  // Nullify the pointer to avoid dangling
-        }
-
         toBeDeleted.push_back(gameObject);  // Schedule the GameObject for deletion
     }
 
@@ -214,10 +206,7 @@ public:
 
             if (it != gameObjects.end()) {
                 gameObjects.erase(it, gameObjects.end());
-            }
-
-            // Clean up memory for the deleted object
-            delete gameObject;
+            }            
         }
         toBeDeleted.clear();  // Clear the scheduled deletions list
     }

@@ -9,13 +9,20 @@
 std::unique_ptr<Component> HeroComponent::create(GameObject& parent, tinyxml2::XMLElement* element)
 {
     double speed = element->IntAttribute("speed", 0);
+    int health = element->IntAttribute("health", 15);  // Allow overriding default health
 
-    auto component = std::make_unique<HeroComponent>(parent, speed);
-    return component;
+    return std::make_unique<HeroComponent>(parent, speed, health);
 }
 
 void HeroComponent::setSpeed(float speed) {
     moveSpeed = static_cast<float>(speed);
+}
+void HeroComponent::setHealth(float initialHealth) {
+    health = static_cast<float>(initialHealth);
+}
+void HeroComponent::takeDamage(int damage) {
+    health -= damage;  // Reduce health
+    std::cout << "Hero took " << damage << " damage. Health now: " << health << std::endl;
 }
 
 void HeroComponent::update() {
@@ -44,6 +51,10 @@ void HeroComponent::update() {
     }
 
     body->SetLinearVelocity(velocity);
+
+    if (health <= 0) {
+        Engine::scheduleDeleteGameObject(&parent());  // Schedule the GameObject for deletion
+    }
 
     mouseAngle(body);
     static bool mouseButtonPreviouslyPressed = false;
@@ -127,14 +138,13 @@ void HeroComponent::spawnBullet() {
     }
 
     // Add a BulletComponent to manage lifetime and velocity
-    float bulletLifetime = 5.0f;         // Bullet disappears after 5 seconds
-    float bulletSpeed = 1000.0f;         // Speed of the bullet
+    float bulletLifetime = 30.0f;         // Bullet disappears after 5 seconds
+    float bulletSpeed = 50.0f;         // Speed of the bullet
     auto gunBullet = std::make_unique<BulletComponent>(*bullet, bulletLifetime, bulletSpeed, direction.x, direction.y);
     bullet->addComponent(std::move(gunBullet));
 
     // Add the bullet to the Engine
     Engine::scheduleAddGameObject(bullet);
 
-    // Print the creation message
-    std::cout << "The bullet object has been made." << std::endl;
+    std::cout << "A bullet has been created" << std::endl;
 }

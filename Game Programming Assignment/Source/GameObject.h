@@ -87,7 +87,7 @@ public:
     }
 
     // Get the b2Body associated with this GameObject
-    b2Body* getBody() const {
+    b2Body* getBody() {
         return body;
     }
 
@@ -117,6 +117,15 @@ public:
 
         // Now set the userData using the setBody function
         setBody(body);  // Call the setBody function to assign the userData
+    }
+
+    ~GameObject() {
+        if (body) {
+            if (body->GetWorld()) {
+                body->GetWorld()->DestroyBody(body); // Safely destroy the body in its world
+            }
+            body = nullptr; // Set the pointer to nullptr to avoid dangling references
+        }
     }
 
 private:

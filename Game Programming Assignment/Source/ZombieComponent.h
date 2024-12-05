@@ -9,18 +9,24 @@
 
 class ZombieComponent : public Component {
 public:
-    ZombieComponent(GameObject& parent, double speed = 5.0, float leftx = 0, float rightx = Engine::width)
-        : Component(parent), slideSpeed(speed), leftx(leftx), rightx(rightx), isActive(false), spaceWasPressed(false), goingRight(true) {}
+    ZombieComponent(GameObject& parent, double speed = 5.0, float leftx = 0, float rightx = Engine::width, int health = 3)
+        : Component(parent), slideSpeed(speed), leftx(leftx), rightx(rightx), isActive(false), spaceWasPressed(false), goingRight(true), health(health) {}
 
     static std::unique_ptr<Component> create(GameObject& parent, tinyxml2::XMLElement* element);
 
     void setSpeed(float speed);
+    void setHealth(float initialHealth);
+    void takeDamage(int damage);
 
     void update() override {
         b2Body* body = parent().getBody();
         if (!body) return;
 
         bool spacePressed = Input::isKeyDown(SDLK_SPACE);
+
+        if (health <= 0) {
+            Engine::scheduleDeleteGameObject(&parent());  // Schedule the GameObject for deletion
+        }
 
         // Toggle activation when space is pressed
         if (spacePressed && !spaceWasPressed) {
@@ -67,4 +73,5 @@ private:
     bool goingRight;       // Direction of movement
     int leftx;             // Left boundary
     int rightx;            // Right boundary
+    int health;
 };

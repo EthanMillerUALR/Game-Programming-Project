@@ -12,7 +12,6 @@ void BulletComponent::update() {
     if (_lifetime <= 0) {
         // Schedule the bullet for removal
         Engine::scheduleDeleteGameObject(&parent());
-        std::cout << "Bullet will be expired and removed." << std::endl;
         return;
     }
 
@@ -30,7 +29,6 @@ void BulletComponent::draw() {
 }
 
 BulletComponent::~BulletComponent() {
-    std::cout << "BulletComponent destroyed." << std::endl;
 }
 
 

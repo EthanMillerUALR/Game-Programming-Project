@@ -5,7 +5,7 @@ C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Program
 C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(13,69): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   (compiling source file 'Source/GameContactListener.cpp')
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(54,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(60,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Source/GameContactListener.cpp')
   
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
