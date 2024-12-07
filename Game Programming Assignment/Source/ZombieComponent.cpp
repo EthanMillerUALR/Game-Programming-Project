@@ -47,8 +47,9 @@ void ZombieComponent::setTime(float newTime)
 
 void ZombieComponent::takeDamage(int damage) {
     if (damage > 0) {
-    std::cout << "Zombie health was " << health << std::endl;
-    health -= damage;  // Reduce health
-    std::cout << "But now, Zombie took " << damage << " damage. Health now: " << health << std::endl;
+        std::cout << "Zombie health was " << health << std::endl;
+        health -= damage;  // Reduce health
+        std::cout << "But now, Zombie took " << damage << " damage. Health now: " << health << std::endl;
+        SoundManager::playSound("zombieDamage");
     }
 }

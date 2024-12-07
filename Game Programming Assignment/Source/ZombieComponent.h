@@ -61,10 +61,11 @@ public:
                     // Transition to the Aware state if the hero is within 400 pixels
                     currentState = ZombieState::Aware;
                     std::cout << "Zombie is now aware of the hero!" << std::endl;
+                    SoundManager::playSound("zombieGroan");
                 }
                 else if (distance >= 400.0f && currentState == ZombieState::Aware) {
                     currentState = ZombieState::Unaware;
-                    body->SetTransform(body->GetPosition(), 0);  // Rotate zombie to face the hero
+                    body->SetTransform(body->GetPosition(), 0);
                     std::cout << "Zombie has lost interest in the hero!" << std::endl;
 
                 }

@@ -10,9 +10,9 @@
 #include "ComponentLibrary.h"
 #include "tinyxml2.h"  // Include the XML parser
 #include "View.h"
-#include <SDL2/SDL.h>
 #include <box2d/box2d.h> // Include Box2D
 #include "GameContactListener.h"
+#include "SoundManager.h" //Includes sounds
 
 class ComponentLibrary;
 class Engine {
@@ -46,6 +46,17 @@ public:
         if (!renderer) {
             SDL_Log("Failed to create renderer: %s", SDL_GetError());
             return false;
+        }
+
+        if (!SoundManager::init()) {
+            SDL_Log("Failed to initialize SoundManager");
+            return false;
+        }
+        if (!SoundManager::loadMusic("Assets/SoundFiles/backgroundMusic.wav")) {
+            SDL_Log("Failed to load background music.");
+        }
+        else {
+            SoundManager::playMusic();  // Play music in a loop
         }
 
         world = new b2World(gravity);
@@ -113,6 +124,7 @@ public:
             delete world;  // Clean up Box2D world
             world = nullptr;
         }
+        SoundManager::clean();  // Clean up loaded sounds
         SDL_Quit();
     }
 

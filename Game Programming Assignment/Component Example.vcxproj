@@ -135,6 +135,7 @@
     <ClCompile Include="Source\ComponentLibrary.cpp" />
     <ClCompile Include="Source\BodyComponent.cpp" />
     <ClCompile Include="Source\ComponentBullet.cpp" />
+    <ClCompile Include="Source\SoundManager.cpp" />
     <ClCompile Include="Source\ZombieComponent.cpp" />
     <ClCompile Include="Source\GameContactListener.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Source\HeroComponent.h" />
     <ClInclude Include="Source\ComponentLibrary.h" />
     <ClInclude Include="Source\GameContactListener.h" />
+    <ClInclude Include="Source\SoundManager.h" />
     <ClInclude Include="Source\View.h" />
     <ClInclude Include="Source\Input.h" />
     <ClInclude Include="Source\ZombieComponent.h" />
@@ -174,6 +176,13 @@
     <Xml Include="Assets\XMLFiles\Level4.xml" />
     <Xml Include="Assets\XMLFiles\Level3.xml" />
     <Xml Include="Assets\XMLFiles\Level1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\SoundFiles\backgroundMusic.wav" />
+    <Media Include="Assets\SoundFiles\gunshot.wav" />
+    <Media Include="Assets\SoundFiles\levelClear.wav" />
+    <Media Include="Assets\SoundFiles\zombieDamage.wav" />
+    <Media Include="Assets\SoundFiles\zombieGroan.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

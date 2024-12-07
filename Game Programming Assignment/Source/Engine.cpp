@@ -78,6 +78,11 @@ void Engine::loadLevel(const std::string& levelPath) {
 
     // Confirm load completion
     SDL_Log("Level loading completed from %s", levelPath.c_str());
+    SoundManager::loadSound("zombieDamage", "Assets/SoundFiles/zombieDamage.wav");
+    SoundManager::loadSound("backgroundMusic", "Assets/SoundFiles/backgroundMusic.wav");
+    SoundManager::loadSound("gunshot", "Assets/SoundFiles/gunshot.wav");
+    SoundManager::loadSound("levelClear", "Assets/SoundFiles/levelClear.wav");
+    SoundManager::loadSound("zombieGroan", "Assets/SoundFiles/zombieGroan.wav");
 }
 
 double Engine::getDeltaTime() {

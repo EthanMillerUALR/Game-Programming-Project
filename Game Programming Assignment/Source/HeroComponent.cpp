@@ -149,4 +149,5 @@ void HeroComponent::spawnBullet() {
 
     // Add the bullet to the Engine
     Engine::scheduleAddGameObject(bullet);
+    SoundManager::playSound("gunshot");
 }
