@@ -15,14 +15,15 @@ enum class ZombieState {
 
 class ZombieComponent : public Component {
 public:
-    ZombieComponent(GameObject& parent, double speed = 5.0, int health = 3, int damage = 3)
-        : Component(parent), slideSpeed(speed), goingRight(true), health(health), damage(damage), currentState(ZombieState::Unaware) {}
+    ZombieComponent(GameObject& parent, double speed = 5.0, int health = 3, int damage = 3, float attackSpeed = 1.0)
+        : Component(parent), slideSpeed(speed), goingRight(true), health(health), damage(damage), attackSpeed(attackSpeed), currentState(ZombieState::Unaware) {}
 
     static std::unique_ptr<Component> create(GameObject& parent, tinyxml2::XMLElement* element);
 
     void setSpeed(float speed);
     void setHealth(float initialHealth);
     void setDamage(float assignedDamage);
+    void setAttackSpeed(float newAttackSpeed);
     void takeDamage(int damage);
     int getDamage();  // Function to return the current damage value
     float getTime();
@@ -103,6 +104,7 @@ private:
     ZombieState currentState;  // Current state of the zombie
 
     float timeSinceAttack = 0;
+    float attackSpeed;
 
     void handleUnawareState(b2Body* body) {
         // Sliding logic in the unaware state

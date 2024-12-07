@@ -24,6 +24,6 @@
 	<Object>
 		<BodyComponent x="600" y="200" />
 		<SpriteComponent texture="Walker.png" />
-		<ZombieComponent speed="100" />
+		<ZombieComponent speed="100" attackSpeed="0.5" />
 	</Object>
 </Level>
