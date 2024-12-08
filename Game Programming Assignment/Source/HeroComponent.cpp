@@ -57,7 +57,6 @@ void HeroComponent::update() {
 
     if (health <= 0) {
         Engine::scheduleDeleteGameObject(&parent());  // Schedule the GameObject for deletion
-        std::cout << "Hero has died" << std::endl;
     }
 
     mouseAngle(body);
@@ -110,7 +109,7 @@ void HeroComponent::spawnBullet() {
     b2Vec2 heroCenter = heroPosition + b2Vec2(heroWidth / 2.0f, heroHeight / 2.0f);
 
     // Fixed distance from the hero to spawn the bullet (adjust as needed)
-    float spawnDistance = 30.0f;
+    float spawnDistance = 10.0f;
 
     // Calculate the direction vector the hero is facing
     b2Vec2 direction(cos(heroAngle), sin(heroAngle));
@@ -142,7 +141,7 @@ void HeroComponent::spawnBullet() {
     }
 
     // Add a BulletComponent to manage lifetime and velocity
-    float bulletLifetime = 3.0f;         // Bullet disappears after 5 seconds
+    float bulletLifetime = 1.5f;         // Bullet disappears after 5 seconds
     float bulletSpeed = 500.0f;         // Speed of the bullet
     auto gunBullet = std::make_unique<BulletComponent>(*bullet, bulletLifetime, bulletSpeed, direction.x, direction.y);
     bullet->addComponent(std::move(gunBullet));

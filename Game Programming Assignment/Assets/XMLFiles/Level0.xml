@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level>
 	<Object>
-		<BodyComponent x="0" y="0" width="20" height="580" btype ="static"/>
+		<BodyComponent x="0" y="0" width="25" height="575" btype ="static"/>
 		<SpriteComponent texture="Wall.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="20" y="0" width="780" height="20" btype ="static"/>
+		<BodyComponent x="25" y="0" width="775" height="25" btype ="static"/>
 		<SpriteComponent texture="Wall.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="780" y="20" width="20" height="580" btype ="static"/>
+		<BodyComponent x="775" y="25" width="25" height="575" btype ="static"/>
 		<SpriteComponent texture="Wall.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="0" y="580" width="780" height="20" btype ="static"/>
+		<BodyComponent x="0" y="575" width="775" height="25" btype ="static"/>
 		<SpriteComponent texture="Wall.png" />
 	</Object>
 	<Object>
-		<BodyComponent x="100" y="200" />
+		<BodyComponent x="375" y="275" />
 		<SpriteComponent texture="Hero.png" />
-		<HeroComponent speed="150" />	
-	</Object>
-	<Object>
-		<BodyComponent x="600" y="200" />
-		<SpriteComponent texture="Walker.png" />
-		<ZombieComponent speed="100" attackSpeed="0.5" />
+		<HeroComponent speed="150" health="25" />	
 	</Object>
 </Level>

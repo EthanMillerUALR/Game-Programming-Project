@@ -1,29 +1,19 @@
-﻿  ZombieComponent.cpp
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(36,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(42,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(43,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(121,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.h(141,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
-  
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.cpp(18,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.cpp(23,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+﻿  HeroComponent.cpp
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(21,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(44,23): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(47,23): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(50,23): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(53,23): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(90,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(105,21): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(106,22): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3597,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Source/ZombieComponent.cpp')
+  (compiling source file 'Source/HeroComponent.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3597,56):
       the template instantiation context (the oldest one first) is
-          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.cpp(10,17):
-          see reference to function template instantiation 'std::unique_ptr<ZombieComponent,std::default_delete<ZombieComponent>> std::make_unique<ZombieComponent,GameObject&,double&,int&,int&,double&,0>(GameObject &,double &,int &,int &,double &)' being compiled
+          C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\HeroComponent.cpp(14,17):
+          see reference to function template instantiation 'std::unique_ptr<HeroComponent,std::default_delete<HeroComponent>> std::make_unique<HeroComponent,GameObject&,double&,int&,0>(GameObject &,double &,int &)' being compiled
   
-C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\Source\ZombieComponent.cpp(40,1): warning C4715: 'ZombieComponent::getDamage': not all control paths return a value
   Component Example.vcxproj -> C:\Users\15015\Documents\School\Fall 2024\Intro to Game Programming\Game Programming Project\Game-Programming-Project\Game Programming Assignment\x64\Debug\GameProgrammingAssignment.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

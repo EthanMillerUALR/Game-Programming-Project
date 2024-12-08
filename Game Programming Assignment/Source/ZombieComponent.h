@@ -37,15 +37,14 @@ public:
 
 
         // Save initial x position as the bounds for movement (if not already set)
-        if (initialX < 0) {
+        if (initialX <= 0) {
             initialX = body->GetPosition().x;
             leftx = initialX;
-            rightx = initialX + 50.0f;  // Adjust as needed
+            rightx = initialX + 20.0f;  // Adjust as needed
         }
 
         if (health <= 0) {
             Engine::scheduleDeleteGameObject(&parent());  // Schedule the GameObject for deletion
-            std::cout << "Zombie has died" << std::endl;
         }
 
         // Check proximity to HeroComponent
@@ -61,13 +60,12 @@ public:
                 if (distance < 400.0f && currentState == ZombieState::Unaware) {
                     // Transition to the Aware state if the hero is within 400 pixels
                     currentState = ZombieState::Aware;
-                    std::cout << "Zombie is now aware of the hero!" << std::endl;
                     SoundManager::playSound("zombieGroan");
                 }
                 else if (distance >= 400.0f && currentState == ZombieState::Aware) {
                     currentState = ZombieState::Unaware;
                     body->SetTransform(body->GetPosition(), 0);
-                    std::cout << "Zombie has lost interest in the hero!" << std::endl;
+                    initialX = 0;
 
                 }
             }
@@ -75,6 +73,7 @@ public:
         else {
             currentState = ZombieState::Unaware;
             body->SetTransform(body->GetPosition(), 0);
+            initialX = 0;
         }
 
         

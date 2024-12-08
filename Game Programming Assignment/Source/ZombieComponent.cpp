@@ -33,8 +33,7 @@ int ZombieComponent::getDamage(){
         return 0;
     }
     else if (getTime() > attackSpeed) {
-        setTime(0);  // Reset timer
-        std::cout << "Zombie is attacking! Damage: " << damage << std::endl;
+        setTime(0);
         return damage;  // Return the damage value
     }
 }
@@ -51,9 +50,7 @@ void ZombieComponent::setTime(float newTime)
 
 void ZombieComponent::takeDamage(int damage) {
     if (damage > 0) {
-        std::cout << "Zombie health was " << health << std::endl;
-        health -= damage;  // Reduce health
-        std::cout << "But now, Zombie took " << damage << " damage. Health now: " << health << std::endl;
+        health -= damage;
         SoundManager::playSound("zombieDamage");
     }
 }

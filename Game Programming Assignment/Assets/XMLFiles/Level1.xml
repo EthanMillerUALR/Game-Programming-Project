@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level>
 	<Object>
-		<BodyComponent x="600" y="200" />
+		<BodyComponent x="100" y="100" />
 		<SpriteComponent texture="Walker.png" />
-		<ZombieComponent speed="100" />
+		<ZombieComponent speed="80" />
+	</Object>
+	<Object>
+		<BodyComponent x="100" y="500" />
+		<SpriteComponent texture="Walker.png" />
+		<ZombieComponent speed="80" />
+	</Object>
+	<Object>
+		<BodyComponent x="700" y="100" />
+		<SpriteComponent texture="Walker.png" />
+		<ZombieComponent speed="80" />
+	</Object>
+	<Object>
+		<BodyComponent x="700" y="500" />
+		<SpriteComponent texture="Walker.png" />
+		<ZombieComponent speed="80" />
 	</Object>
 </Level>

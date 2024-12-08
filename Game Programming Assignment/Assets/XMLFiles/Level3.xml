@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level>
 	<Object>
-		<BodyComponent x="100" y="400" />
-		<SpriteComponent texture="runner.png" />
-		<ZombieComponent speed="100" leftx="100" rightx="200" />
+		<BodyComponent x="150" y="150" width="80" height="80" />
+		<SpriteComponent texture="Tank.png" />
+		<ZombieComponent speed="40" health="6" damage="6" attackSpeed="1.5" />
 	</Object>
 	<Object>
-		<BodyComponent x="300" y="200" />
-		<SpriteComponent texture="walker.png" />
+		<BodyComponent x="650" y="150" width="80" height="80" />
+		<SpriteComponent texture="Tank.png" />
+		<ZombieComponent speed="40" health="6" damage="6" attackSpeed="1.5" />
+	</Object>
+	<Object>
+		<BodyComponent x="150" y="450" width="80" height="80" />
+		<SpriteComponent texture="Tank.png" />
+		<ZombieComponent speed="40" health="6" damage="6" attackSpeed="1.5" />
+	</Object>
+	<Object>
+		<BodyComponent x="650" y="450" width="80" height="80" />
+		<SpriteComponent texture="Tank.png" />
+		<ZombieComponent speed="40" health="6" damage="6" attackSpeed="1.5" />
+	</Object>
+	<Object>
+		<BodyComponent x="375" y="100" />
+		<SpriteComponent texture="Walker.png" />
+		<ZombieComponent speed="80" />
+	</Object>
+	<Object>
+		<BodyComponent x="375" y="500" />
+		<SpriteComponent texture="Walker.png" />
+		<ZombieComponent speed="80" />
 	</Object>
 </Level>

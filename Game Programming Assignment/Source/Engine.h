@@ -22,7 +22,7 @@ public:
 
     Engine(const std::string& levelPath);  // Constructor to load level from XML
 
-    void loadLevel(const std::string& levelPath);  // Load GameObjects from the given XML
+    static void loadLevel(const std::string& levelPath);  // Load GameObjects from the given XML
 
     static View view;
 
@@ -78,27 +78,7 @@ public:
     }
 
     // Update all game objects (static)
-    static void update() {
-
-        double deltaX = 0, deltaY = 0;
-
-        if (deltaX != 0 || deltaY != 0) {
-            view.moveView(deltaX, deltaY);
-        }
-
-        // Step the Box2D world
-        if (world) {
-            world->Step(static_cast<float>(deltaTime), 8, 3);  // Box2D step
-        }
-
-        for (auto& gameObject : gameObjects) {
-            gameObject->update();  // Update each GameObject
-        }
-
-        // Process additions and deletions after all game objects are updated
-        processScheduledAdditions();
-        processScheduledDeletions();
-    }
+    static void update();  
 
     // Render all game objects (static)
     static void render() {
@@ -239,4 +219,8 @@ private:
     static b2Vec2 gravity;  // Gravity vector
 
     static GameContactListener contactListener; // Declare a contact listener
+
+    static int currentLevel;  // Track the current level
+    static int heroDelay;
+    static int zombieDelay;
 };
